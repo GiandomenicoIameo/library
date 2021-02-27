@@ -27,10 +27,12 @@ struct elem *insert( struct elem *root, struct elem *node ) {
       if( node->data == root->data ) {
           res = root;
       }
+    
       else if( node->data > root->data ) {
           root->right = insert( root->right, node );
           res = root;
       }
+    
       else {
           root->left = insert( root->left, node );
           res = root;
