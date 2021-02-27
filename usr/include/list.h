@@ -1,3 +1,7 @@
+/* /* This library is free software; you can redistribute it and/or
+   modify. ISO C99 Standard: 1.0 List      <list.h>
+*/
+
 #ifndef _LIST_H
 #define _LIST_H
 
