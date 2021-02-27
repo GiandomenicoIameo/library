@@ -8,8 +8,8 @@
 #include <stdio.h>
 
 char isvowel( char c );
-unsigned int countdigit( const char *str );
-unsigned int countcharacter( const char *str );
-unsigned int countspace( const char *str );
+unsigned int strcd( const char *s );
+unsigned int strcch( const char *s );
+unsigned int strcsp( const char *s ) ;
 
 #endif
