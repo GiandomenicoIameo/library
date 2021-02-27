@@ -14,3 +14,5 @@ struct elem* insert( struct elem *root, struct elem *node );
 void preOrder( struct elem *root );
 void inOrder( struct elem *root );
 void postOrder( struct elem *root );
+
+#endif
