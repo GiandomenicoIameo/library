@@ -25,32 +25,32 @@ char isvowel( char c ) {
   }
 }
 
-unsigned int countdigit( const char *str ) { 
+unsigned int strcd( const char *s ) {
 
   unsigned int count = 0;
 
-  for( ; *str != '\0'; str++ ) {
-    if( isdigit( *str ) ) count++;
+  for( ; *s != '\0'; s++ ) {
+    if( isdigit( *s ) ) count++;
   }
   return count;
 }
 
-unsigned int countcharacter( const char *str ) {
+unsigned int strcch( const char *s ) {
 
   unsigned int count = 0;
 
-  for( ; *str != '\0'; str++ ) {
+  for( ; *s != '\0'; s++ ) {
     count++;
   }
   return count;
 }
 
-unsigned int countspace( const char *str ) {
+unsigned int strcsp( const char *s ) {
 
   unsigned int count = 0;
 
-  for( ; *str != '\0'; str++ ) {
-      if( *str == ' ' ) count++;
+  for( ; *s != '\0'; s++ ) {
+      if( *s == ' ' ) count++;
   }
   return count;
 }
