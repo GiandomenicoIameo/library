@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "../include/bstree.h"
+#include "include/bstree.h"
 
 struct elem *createNode( int data ) {
 
