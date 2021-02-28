@@ -127,19 +127,18 @@ int checkBst( struct elem *root ) {
   struct elem *max, *min;
 
   if( root == NULL ) {
-      res = 1;
+      return 1;
   }
   else {
       max = maxSearch( root->left );
       min = minSearch( root->right );
 
       if( max != NULL && max->data > root->data ) {
-          res = 0;
+          return 0;
       }
       if( min != NULL && min->data < root->data ) {
-          res = 0;
+          return 0;
       }
-      res = checkBst( root->left ) && checkBst( root->right );
+      return checkBst( root->left ) && checkBst( root->right );
   }
-  return res;
 }
