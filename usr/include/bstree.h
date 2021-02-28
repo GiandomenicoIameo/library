@@ -23,7 +23,9 @@ struct elem *minSearch( struct elem* root );
 struct elem *maxSearch( struct elem* root );
 struct elem *search( struct elem *root, int data );
 
-// sorting algorithm of an array
+/* The following algorithm is able to sort
+every element belonging to a set */
+
 void bstSort( int* array, const int len  );
 void sort( struct elem *root, int* array );
 
