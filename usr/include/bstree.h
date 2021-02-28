@@ -1,3 +1,7 @@
+/* This library is free software; you can redistribute it and/or
+   modify. ISO C99 Standard: 1.0 Bstree      <bstree.h>
+*/
+
 #ifndef _BSTREE_H
 #define _BSTREE_H
 
