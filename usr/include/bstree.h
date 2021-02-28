@@ -14,5 +14,9 @@ struct elem* insert( struct elem *root, struct elem *node );
 void preOrder( struct elem *root );
 void inOrder( struct elem *root );
 void postOrder( struct elem *root );
+struct elem *minSearch( struct elem* root );
+struct elem *maxSearch( struct elem* root );
+struct elem *search( struct elem *root, int data );
+int checkBst( struct elem *root );
 
 #endif
