@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <ctype.h>
-#include <string.h>
+#include <stdlib.h>
 #include "include/characters.h"
 
 char isvowel( char c ) {
@@ -36,16 +36,6 @@ unsigned int strcd( const char *s ) {
   return count;
 }
 
-unsigned int strcch( const char *s ) {
-
-  unsigned int count = 0;
-
-  for( ; *s != '\0'; s++ ) {
-    count++;
-  }
-  return count;
-}
-
 unsigned int strcsp( const char *s ) {
 
   unsigned int count = 0;
@@ -56,14 +46,9 @@ unsigned int strcsp( const char *s ) {
   return count;
 }
 
-size_t strtop( char *s ) {
-  return strlen( s );
-}
-
 void strpush( char *s, int c ) {
 
-  size_t top;
-  top = strtop( s );
+  size_t top = strlen( s );
 
   s[ top++ ] = c;
   s[ top ] = '\0';
@@ -71,7 +56,7 @@ void strpush( char *s, int c ) {
 
 void strpop( char *s ) {
 
-  size_t top = strtop( s );
+  size_t top = strlen( s );
 
   if( top ) {
     s[ top - 1 ] = '\0';
