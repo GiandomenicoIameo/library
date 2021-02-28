@@ -24,7 +24,10 @@ struct elem *maxSearch( struct elem* root );
 struct elem *search( struct elem *root, int data );
 
 /* The following algorithm is able to sort
-every element belonging to a set */
+every element belonging to a set. Consequently, 
+the elements must necessarily be different. 
+moreover the complexity of this 
+algorithm, in the best case, is O( nlogn )*/
 
 void bstSort( int* array, const int len  );
 void sort( struct elem *root, int* array );
