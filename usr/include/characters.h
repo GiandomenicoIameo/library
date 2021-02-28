@@ -12,14 +12,12 @@
 
 char isvowel( char c );
 unsigned int strcd( const char *s );
-unsigned int strcch( const char *s );
 unsigned int strcsp( const char *s );
 
-/* Mainly the following three basic operations
+/* Mainly the following two basic operations
  are performed in the stack */
 
-void strpop( char *s );
-size_t strtop( char *s );
 void strpush( char *s, int c );
+void strpop( char *s );
 
 #endif
