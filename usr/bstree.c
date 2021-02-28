@@ -16,54 +16,53 @@ struct elem *createNode( int data ) {
   return node;
 }
 
-struct elem *insert( struct elem *root, struct elem *node ) {
+struct elem *insert( struct elem *root, int data ) {
 
-  struct elem *res;
+  struct elem *node = createNode( data );
 
   if( root == NULL ) {
-      res = node;
+      return node;
   }
   else {
-      if( node->data == root->data ) {
-          res = root;
+      if( data == root->data ) {
+          return root;
       }
 
-      else if( node->data > root->data ) {
-          root->right = insert( root->right, node );
-          res = root;
+      else if( root->data < data ) {
+          root->right = insert( root->right, data );
+          return root;
       }
 
       else {
-          root->left = insert( root->left, node );
-          res = root;
+          root->left = insert( root->left, data );
+          return root;
       }
   }
-  return res;
 }
 
 void preOrder( struct elem *root ) {
 
   if( root != NULL ) {
       printf( "%d ", root->data );
-      preOrder( root->right );
       preOrder( root->left );
+      preOrder( root->right );
   }
 }
 
 void inOrder( struct elem *root ) {
 
   if( root != NULL ) {
-      preOrder( root->right );
+      inOrder( root->left );
       printf( "%d ", root->data );
-      preOrder( root->left );
+      inOrder( root->right );
   }
 }
 
 void postOrder( struct elem *root ) {
 
   if( root != NULL ) {
-      preOrder( root->right );
-      preOrder( root->left );
+      postOrder( root->left );
+      postOrder( root->right );
       printf( "%d ", root->data );
   }
 }
@@ -123,7 +122,6 @@ struct elem *search( struct elem *root, int data ) {
 
 int checkBst( struct elem *root ) {
 
-  int res;
   struct elem *max, *min;
 
   if( root == NULL ) {
@@ -140,5 +138,26 @@ int checkBst( struct elem *root ) {
           return 0;
       }
       return checkBst( root->left ) && checkBst( root->right );
+  }
+}
+
+void bstSort( int* array, const int len ) {
+
+  struct elem *root = NULL;
+
+  for( int step = 0; step < len; step++ ) {
+    root = insert( root, array[ step ] );
+  }
+  sort( root, array );
+}
+
+void sort( struct elem *root, int* array ) {
+
+  static int step = 0;
+
+  if( root != NULL ) {
+    sort( root->left, array );
+    array[ step++ ] = root->data;
+    sort( root->right, array );
   }
 }
