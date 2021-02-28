@@ -9,6 +9,8 @@
 #define _CHARACTERS_H
 
 #include <stdio.h>
+#include <ctype.h>
+#include <string.h>
 
 char isvowel( char c );
 unsigned int strcd( const char *s );
