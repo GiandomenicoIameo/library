@@ -27,12 +27,12 @@ struct elem *insert( struct elem *root, struct elem *node ) {
       if( node->data == root->data ) {
           res = root;
       }
-    
+
       else if( node->data > root->data ) {
           root->right = insert( root->right, node );
           res = root;
       }
-    
+
       else {
           root->left = insert( root->left, node );
           res = root;
@@ -66,4 +66,80 @@ void postOrder( struct elem *root ) {
       preOrder( root->left );
       printf( "%d ", root->data );
   }
+}
+
+struct elem *minSearch( struct elem* root ) {
+
+  struct elem *res;
+
+  if( root == NULL ) {
+      return root;
+  }
+  else {
+      if( root->left != NULL ) {
+          res =  minSearch( root->left );
+      }
+      else res = root;
+  }
+  return res;
+}
+
+struct elem *maxSearch( struct elem* root ) {
+
+  struct elem *res;
+
+  if( root == NULL ) {
+      return root;
+  }
+  else {
+      if( root->right != NULL ) {
+          res =  minSearch( root->right );
+      }
+      else res = root;
+  }
+  return res;
+}
+
+struct elem *search( struct elem *root, int data ) {
+
+  struct elem *res;
+
+  if( root == NULL ) {
+      res = root;
+  }
+  else {
+      if( data == root->data ) {
+          res = root;
+      }
+      else if( data > root->data ) {
+          res = search( root->right, data );
+      }
+      else {
+          res = search( root->left, data );
+      }
+  }
+  return res;
+}
+
+int checkBst( struct elem *root ) {
+
+  int res;
+  struct elem *max, *min;
+
+  if( root == NULL ) {
+      res = 1;
+  }
+  else {
+      max = maxSearch( root->left );
+      min = minSearch( root->right );
+
+      if( max != NULL && max->data > root->data ) {
+          res = 0;
+      }
+      if( min != NULL && min->data < root->data ) {
+          res = 0;
+      }
+      res = checkBst( root->left ) && checkBst( root->right );
+  }
+  return res;
 }
