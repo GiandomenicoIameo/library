@@ -20,7 +20,6 @@ struct elem {
 
 struct elem *create( int data );
 struct elem *delete( struct elem *top, int data );
-struct elem *push( struct elem *top, struct elem *node );
 struct elem *append( struct elem *top, struct elem *node );
 struct elem *address( struct elem *top, int data );
 struct elem *copy( struct elem *top );
