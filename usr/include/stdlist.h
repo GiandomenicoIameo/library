@@ -19,9 +19,13 @@ struct elem {
 /* Prototype structure for a simply-linked list data structure. */
 
 struct elem *create( int data );
-struct elem *delete( struct elem *top, int data );
+struct elem *delete( struct elem *top, int key );
 struct elem *append( struct elem *top, struct elem *node );
-struct elem *address( struct elem *top, int data );
+
+/* Search for entry matching 'key' in the singly-list. If
+   'key' is 'true' return his address or signal error by returning
+   NULL. */
+struct elem *address( struct elem *top, int key );
 struct elem *copy( struct elem *top );
 struct elem *max( struct elem *top );
 struct elem *min( struct elem *top );
