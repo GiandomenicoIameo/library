@@ -62,7 +62,7 @@ struct elem *address( struct elem *top, int data ) {
   return res;
 }
 
-struct elem *duplicate( struct elem *top ) {
+struct elem *copy( struct elem *top ) {
 
   struct elem *res;
   struct elem *node;
@@ -71,7 +71,7 @@ struct elem *duplicate( struct elem *top ) {
       res = top;
   else {
       node = create( top->data );
-      node->next = duplicate( top->next );
+      node->next = copy( top->next );
       res = node;
   }
   return res;
@@ -114,7 +114,7 @@ struct elem *min( struct elem *top ) {
 struct elem *merge( struct elem *top1, struct elem *top2 ) {
 
   struct elem *res;
-  
+
   if( top1 == NULL )
       res = top2;
   else {
