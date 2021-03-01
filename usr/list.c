@@ -49,14 +49,17 @@ struct elem *delete( struct elem *top, int data ) {
 
 struct elem *search( struct elem *top, int data ) {
 
+  struct elem *res;
+
   if( top == NULL )
-      return top;
+      res = top;
   else {
       if( top->data == data )
-          return top;
+          res = top;
       else
-          return search( top->next, data );
+          res = search( top->next, data );
   }
+  return res;
 }
 
 struct elem *duplicate( struct elem *top ) {
