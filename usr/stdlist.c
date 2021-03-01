@@ -1,14 +1,14 @@
 #include <stdlib.h>
 #include "include/stdlist.h"
 
-struct elem *create( int data ) {
+struct elem *create( int key ) {
 
   struct elem *node;
 
   node = ( struct elem* )malloc( sizeof( struct elem ) );
   if( node == NULL ) return node;
 
-  node->data = data;
+  node->data = key;
   node->next = NULL;
 
   return node;
