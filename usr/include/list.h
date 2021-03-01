@@ -16,6 +16,8 @@ struct elem {
   struct elem *next;
 };
 
+/* Prototype structure for a simply-linked list data structure. */
+
 struct elem *create( int data );
 struct elem *delete( struct elem *top, int data );
 struct elem *push( struct elem *top, struct elem *node );
@@ -25,5 +27,6 @@ struct elem *copy( struct elem *top );
 struct elem *max( struct elem *top );
 struct elem *min( struct elem *top );
 struct elem *merge( struct elem *top1, struct elem *top2 );
+struct elem *clear( struct elem *top );
 
 #endif
