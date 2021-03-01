@@ -3,6 +3,16 @@
 
    This library is free software; you can redistribute it and/or
    modify. ISO C99 Standard: 1.0 singly-list      <stdlist.h>
+
+   This file define one type of data structures: singly-linked list.
+   A singly-linked list is headed by a single forward pointer. The
+   elements are singly linked for minimum space and pointer manipulation
+   overhead at the expense of O(n) insertion and removal for arbitrary elements.
+   New elements can be added to the list after an existing element or at the
+   tail of the list.
+   A singly-linked list may only be traversed in the forward direction.
+   Singly-linked lists are ideal for applications with large
+   datasets and few or no removals.
 */
 
 #ifndef _LIST_H
