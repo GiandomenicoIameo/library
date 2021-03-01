@@ -110,3 +110,16 @@ struct elem *min( struct elem *top ) {
   }
   return res;
 }
+
+struct elem *merge( struct elem *top1, struct elem *top2 ) {
+
+  struct elem *res;
+  
+  if( top1 == NULL )
+      res = top2;
+  else {
+      top1->next = merge( top1->next, top2 );
+      res = top1;
+  }
+  return res;
+}
