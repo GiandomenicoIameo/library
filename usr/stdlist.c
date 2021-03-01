@@ -27,6 +27,25 @@ struct elem *append( struct elem *top, struct elem *node ) {
   return res;
 }
 
+struct elem *inorder( struct elem *top, struct elem *node ) {
+
+  struct elem *res;
+
+  if( top == NULL )
+      res = node;
+  else {
+      if( top->data > node->data ) {
+          node->next = top;
+          res = node;
+      }
+      else {
+          top->next = inorder( top->next, node );
+          res = top;
+      }
+  }
+  return res;
+}
+
 struct elem *delete( struct elem *top, int key ) {
 
   struct elem *res;
