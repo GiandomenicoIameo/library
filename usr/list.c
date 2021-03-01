@@ -47,7 +47,7 @@ struct elem *delete( struct elem *top, int data ) {
   return res;
 }
 
-struct elem *search( struct elem *top, int data ) {
+struct elem *address( struct elem *top, int data ) {
 
   struct elem *res;
 
@@ -57,7 +57,7 @@ struct elem *search( struct elem *top, int data ) {
       if( top->data == data )
           res = top;
       else
-          res = search( top->next, data );
+          res = address( top->next, data );
   }
   return res;
 }
@@ -73,6 +73,40 @@ struct elem *duplicate( struct elem *top ) {
       node = create( top->data );
       node->next = duplicate( top->next );
       res = node;
+  }
+  return res;
+}
+
+struct elem *max( struct elem *top ) {
+
+  struct elem *res;
+
+  if( top == NULL )
+      res = top;
+  else {
+      res = max( top->next );
+
+      if( res == NULL ) res = top;
+      else {
+        if( top->data > res->data ) res = top;
+      }
+  }
+  return res;
+}
+
+struct elem *min( struct elem *top ) {
+
+  struct elem *res;
+
+  if( top == NULL )
+      res = top;
+  else {
+      res = min( top->next );
+
+      if( res == NULL ) res = top;
+      else {
+        if( top->data < res->data ) res = top;
+      }
   }
   return res;
 }
