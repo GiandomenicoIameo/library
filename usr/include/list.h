@@ -19,7 +19,9 @@ struct elem {
 struct elem *create( int data );
 struct elem *delete( struct elem *top, int data );
 struct elem *append( struct elem *top, struct elem *node );
-struct elem *search( struct elem *top, int data );
+struct elem *address( struct elem *top, int data );
 struct elem *duplicate( struct elem *top );
+struct elem *max( struct elem *top );
+struct elem *min( struct elem *top );
 
 #endif
