@@ -28,36 +28,36 @@ struct elem *append( struct elem *top, struct elem *node ) {
   return res;
 }
 
-struct elem *delete( struct elem *top, int data ) {
+struct elem *delete( struct elem *top, int key ) {
 
   struct elem *res;
 
   if( top == NULL )
       res = top;
   else {
-      if( top->data == data ) {
+      if( top->data == key ) {
           res = top->next;
           free( top );
       }
       else {
-          top->next = delete( top->next, data );
+          top->next = delete( top->next, key );
           res = top;
       }
   }
   return res;
 }
 
-struct elem *address( struct elem *top, int data ) {
+struct elem *address( struct elem *top, int key ) {
 
   struct elem *res;
 
   if( top == NULL )
       res = top;
   else {
-      if( top->data == data )
+      if( top->data == key )
           res = top;
       else
-          res = address( top->next, data );
+          res = address( top->next, key );
   }
   return res;
 }
