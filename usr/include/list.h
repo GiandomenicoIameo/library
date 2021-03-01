@@ -18,9 +18,10 @@ struct elem {
 
 struct elem *create( int data );
 struct elem *delete( struct elem *top, int data );
+struct elem *push( struct elem *top, struct elem *node );
 struct elem *append( struct elem *top, struct elem *node );
 struct elem *address( struct elem *top, int data );
-struct elem *duplicate( struct elem *top );
+struct elem *copy( struct elem *top );
 struct elem *max( struct elem *top );
 struct elem *min( struct elem *top );
 struct elem *merge( struct elem *top1, struct elem *top2 );
