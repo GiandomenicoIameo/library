@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "include/list.h"
+#include "include/stdlist.h"
 
 struct elem *create( int data ) {
 
