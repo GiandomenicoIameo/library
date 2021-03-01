@@ -15,7 +15,7 @@ struct elem {
 
 /* Prototype structure for a simply-linked list data structure. */
 
-struct elem *create( int data );
+struct elem *create( int key );
 struct elem *delete( struct elem *top, int key );
 struct elem *append( struct elem *top, struct elem *node );
 
