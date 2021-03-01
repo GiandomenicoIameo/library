@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "include/list.h"
 
-struct elem* create( int data ) {
+struct elem *create( int data ) {
 
   struct elem *node;
 
@@ -15,7 +15,7 @@ struct elem* create( int data ) {
   return node;
 }
 
-struct elem* append( struct elem *top, struct elem *node ) {
+struct elem *append( struct elem *top, struct elem *node ) {
 
   struct elem *res;
 
