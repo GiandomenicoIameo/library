@@ -128,9 +128,8 @@ struct elem *clear( struct elem *top ) {
 
   struct elem *res;
 
-  if( top == NULL ) {
+  if( top == NULL )
       res = top;
-  }
   else {
       res = clear( top->next );
       free( top );
