@@ -23,7 +23,7 @@ struct tree *insert( struct tree *root, struct tree *node ) {
   } else {
           if( node->data == root->data ) {
                   res = root;
-          } else if( root->data < node->data ) {
+          } else if( node->data > root->data ) {
                   root->right = insert( root->right, node );
                   res = root;
           } else {
