@@ -34,7 +34,7 @@ struct equeue {
   struct elem *end;
 };
 
-/* Prototype structure for a simply-linked list data structure. */
+/* Prototype structure for a simply-linked list and queue-linked list data structure. */
 
 struct elem *create( int key );
 
@@ -152,7 +152,7 @@ and deque operations accordingly.
 isempty() returns: 1 if size is 0,
 else 0 and -1 if the structure does not exist */
 
-int isempty( struct equeue *queue );
+int isempty( void *list );
 
 // Description isempty()
 
