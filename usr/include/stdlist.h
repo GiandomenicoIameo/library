@@ -4,8 +4,8 @@
    This library is free software; you can redistribute it and/or
    modify. ISO C99 Standard: 1.0 singly-list      <stdlist.h>
 
-   This file define one type of data structure: singly-linked list and
-   queue-linked. A singly-linked list is headed by a single forward pointer. The
+   This file define one type of data structure: singly-linked list.
+   A singly-linked list is headed by a single forward pointer. The
    elements are singly linked for minimum space and pointer manipulation
    overhead at the expense of O(n) insertion and removal for arbitrary elements.
    New elements can be added to the list after an existing element or at the
@@ -34,7 +34,7 @@ struct equeue {
   struct elem *end;
 };
 
-/* Prototype structure for a simply-linked list and queue-linked list data structure. */
+/* Prototype structure for a simply-linked list data structure. */
 
 struct elem *create( int key );
 
