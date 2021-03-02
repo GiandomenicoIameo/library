@@ -15,14 +15,14 @@
    datasets and few or no removals.
 */
 
-#ifndef _LIST_H
-#define _LIST_H
+#ifndef _STDLIST_H
+#define _STDLIST_H
 
 #include <stdlib.h>
 
 struct elem {
-  int data;
-  struct elem *next;
+    int data;
+    struct elem *next;
 };
 
 /* The nodes of list are connected to each
@@ -32,8 +32,8 @@ i.e. next = NULL, which indicates the
 end of the linked list. */
 
 struct equeue {
-  struct elem *top;
-  struct elem *end;
+    struct elem *top;
+    struct elem *end;
 };
 
 /* Prototype structure for a simply-linked list data structure. */

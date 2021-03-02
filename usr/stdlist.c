@@ -235,6 +235,7 @@ int isempty( void *list ) {
   return 0;
 }
 
+
 struct equeue *init( void ) {
 
   struct equeue *queue;
