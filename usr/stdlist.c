@@ -109,8 +109,7 @@ struct elem *copy( struct elem *top ) {
 
   if( !top ) {
           res = top;
-  }
-  else {
+  } else {
           node = create( top->data );
           node->next = copy( top->next );
           res = node;
