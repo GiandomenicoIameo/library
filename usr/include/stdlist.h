@@ -179,7 +179,7 @@ will be at the front of the queue so we will remove
 the front element and let the element behind it
 be the new front element. */
 
-struct equeue *denqueue( struct equeue *queue );
+struct equeue *dequeue( struct equeue *queue );
 
 // Description dequeue()
 

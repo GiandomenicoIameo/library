@@ -278,7 +278,7 @@ struct equeue *enqueue( struct equeue *queue, struct elem *node ) {
   return res;
 }
 
-struct equeue *denqueue( struct equeue *queue ) {
+struct equeue *dequeue( struct equeue *queue ) {
 
   struct equeue *res;
 
