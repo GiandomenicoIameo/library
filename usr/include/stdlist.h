@@ -142,7 +142,9 @@ of speed and programming ease.  */
 
 struct equeue *init( void );
 
-// Description init()
+int isempty( void *list );
+
+// Description isempty()
 
 /* To prevent performing operations on an
 empty queue, the programmer is required
@@ -150,17 +152,7 @@ to internally maintain the size of the
 queue which will be updated during enqueue
 and deque operations accordingly.
 isempty() returns: 1 if size is 0,
-else 0 and -1 if the structure does not exist */
-
-int isempty( void *list );
-
-// Description isempty()
-
-/* Enqueue means inserting an element in the queue. In a normal
-queue at a ticket counter, where does a new person go and
-stand to become a part of the queue? The person goes and
-stands in the back. Similarly, a new element in a
-queue is inserted at the back of the queue. */
+else 0 */
 
 static struct elem *add( struct elem *end, struct elem *node );
 struct equeue *enqueue( struct equeue *queue, struct elem *node );
