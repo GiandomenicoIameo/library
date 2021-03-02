@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include "include/stdlist.h"
 
 struct elem *create( int key ) {
