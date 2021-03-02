@@ -14,6 +14,17 @@ struct elem *create( int key ) {
   return node;
 }
 
+struct elem *push( struct elem *top, struct elem *node ) {
+
+  if( top == NULL )
+      top = node;
+  else {
+      node->next = top;
+      top = node;
+  }
+  return top;
+}
+
 struct elem *append( struct elem *top, struct elem *node ) {
 
   struct elem *res;
@@ -61,6 +72,19 @@ struct elem *delete( struct elem *top, int key ) {
           top->next = delete( top->next, key );
           res = top;
       }
+  }
+  return res;
+}
+
+struct elem *pop( struct elem *top ) {
+
+  struct elem *res;
+
+  if( top == NULL )
+      res = top;
+  else {
+      res = top->next;
+      free( top );
   }
   return res;
 }
@@ -174,6 +198,75 @@ struct elem *clear( struct elem *top ) {
   else {
       res = clear( top->next );
       free( top );
+  }
+  return res;
+}
+
+int isempty( struct equeue *queue ) {
+
+  int res;
+
+  if( queue == NULL )
+      res = -1;
+  else {
+      if( queue->top == NULL )
+          res = 1;
+      else res = 0;
+  }
+  return res;
+}
+
+struct equeue *init( void ) {
+
+  struct equeue *queue;
+
+  queue = ( struct equeue* )malloc( sizeof( struct equeue ) );
+  if( queue == NULL ) return queue;
+
+  queue->top = NULL;
+  queue->end = NULL;
+
+  return queue;
+}
+
+static struct elem *add( struct elem *end, struct elem *node ) {
+
+  struct elem *res;
+
+  if( end == NULL )
+      res = node;
+  else {
+      end->next = node;
+      res = node;
+  }
+  return res;
+}
+
+struct equeue *enqueue( struct equeue *queue, struct elem *node ) {
+
+  struct equeue *res;
+
+  if( queue == NULL )
+      res = queue;
+  else {
+      queue->end = add( queue->end, node );
+
+      if( isempty( queue ) == 1 )
+          queue->top = queue->end;
+      res = queue;
+  }
+  return res;
+}
+
+struct equeue *denqueue( struct equeue *queue ) {
+
+  struct equeue *res;
+
+  if( queue == NULL )
+      res = queue;
+  else {
+      queue->top = pop( queue->top );
+      res = queue;
   }
   return res;
 }
