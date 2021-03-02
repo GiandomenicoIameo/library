@@ -9,6 +9,7 @@
 #define _TREE_H
 
 #include <stdio.h>
+#include <stdlib.h>
 
 struct tree {
   struct tree *left;
