@@ -129,18 +129,42 @@ struct elem *min( struct elem *top ) {
   return res;
 }
 
-struct elem *merge( struct elem *top1, struct elem *top2 ) {
+struct elem *concatenate( struct elem *top1, struct elem *top2 ) {
 
   struct elem *res;
 
   if( top1 == NULL )
       res = top2;
   else {
-      top1->next = merge( top1->next, top2 );
+      top1->next = concatenate( top1->next, top2 );
       res = top1;
   }
   return res;
 }
+
+struct elem *merge( struct elem *top1, struct elem *top2 ) {
+
+  struct elem *res;
+
+  if( top1 == NULL || top2 == NULL ) {
+      if( top1 == NULL )
+          res = top1;
+      else
+          res = top2;
+  }
+  else {
+      if( top1->data < top2->data ) {
+          top1->next = merge( top1->next, top2 );
+          res = top1;
+      }
+      else {
+          top2->next = merge( top1, top2->next );
+          res = top2;
+      }
+  }
+  return res;
+}
+
 
 struct elem *clear( struct elem *top ) {
 
