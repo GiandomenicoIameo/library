@@ -165,7 +165,6 @@ struct elem *merge( struct elem *top1, struct elem *top2 ) {
   return res;
 }
 
-
 struct elem *clear( struct elem *top ) {
 
   struct elem *res;
