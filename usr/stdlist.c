@@ -94,11 +94,10 @@ struct elem *address( struct elem *top, int key ) {
   if( top == NULL ) {
           res = top;
   } else {
-          if( top->data == key ) {
+          if( top->data == key )
                   res = top;
-          } else {
-                  res = address( top->next, key ); 
-          }
+          else
+                  res = address( top->next, key );
   }
   return res;
 }
@@ -130,8 +129,8 @@ struct elem *max( struct elem *top ) {
           if( res == NULL ) {
                   res = top;
           } else {
-                 if( top->data > res->data )
-                         res = top;
+                  if( top->data > res->data )
+                          res = top;
           }
   }
   return res;
