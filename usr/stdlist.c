@@ -6,7 +6,7 @@ struct elem *create( int key ) {
   struct elem *node;
 
   node = ( struct elem* )malloc( sizeof( struct elem ) );
-  if( node == NULL ) return node;
+  if( !node ) return node;
 
   node->data = key;
   node->next = NULL;
