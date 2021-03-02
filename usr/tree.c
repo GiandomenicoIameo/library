@@ -34,6 +34,20 @@ struct tree *insert( struct tree *root, struct tree *node ) {
   return res;
 }
 
+struct tree *destroy( struct tree *root ) {
+
+  struct tree *res;
+
+  if( !root ) {
+          res = root;
+  } else {
+          res = destroy( root->left );
+          res = destroy( root->right );
+          free( root );
+  }
+  return res;
+}
+
 void preOrder( struct tree *root ) {
 
   if( root ) {

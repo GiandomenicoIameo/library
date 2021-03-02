@@ -18,7 +18,8 @@ struct tree {
 };
 
 struct tree *pose( int data );
-struct tree* insert( struct tree *root, struct tree *node );
+struct tree *insert( struct tree *root, struct tree *node );
+struct tree *destroy( struct tree *root );
 
 // Algorithms for visiting binary trees
 void preOrder( struct tree *root );
