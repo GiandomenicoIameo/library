@@ -34,7 +34,7 @@ struct tree *insert( struct tree *root, struct tree *node ) {
   return res;
 }
 
-void bspre( struct tree *root ) {
+void preOrder( struct tree *root ) {
 
   if( root ) {
           printf( "%d ", root->data );
@@ -43,7 +43,7 @@ void bspre( struct tree *root ) {
   }
 }
 
-void bsin( struct tree *root ) {
+void inOrder( struct tree *root ) {
 
   if( root ) {
           inOrder( root->left );
@@ -52,7 +52,7 @@ void bsin( struct tree *root ) {
   }
 }
 
-void bspost( struct tree *root ) {
+void postOrder( struct tree *root ) {
 
   if( root ) {
           postOrder( root->left );
