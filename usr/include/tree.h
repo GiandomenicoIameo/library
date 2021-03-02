@@ -21,9 +21,9 @@ struct tree *pose( int data );
 struct tree* insert( struct tree *root, struct tree *node );
 
 // Algorithms for visiting binary trees
-void preOrder( struct tree *root );
-void inOrder( struct tree *root );
-void postOrder( struct tree *root );
+void bsin( struct tree *root );
+void bspre( struct tree *root );
+void bspost( struct tree *root );
 
 // Search algorithms
 struct tree *bsmin( struct tree* root );
