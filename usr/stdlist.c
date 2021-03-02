@@ -41,7 +41,7 @@ unsigned int len( struct elem *top ) {
 
   unsigned int res;
 
-  if( top == NULL ) {
+  if( !top ) {
           res = 0;
   } else {
           res = len( top->next );
