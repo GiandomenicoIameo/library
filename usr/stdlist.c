@@ -243,7 +243,7 @@ struct equeue *enqueue( struct equeue *queue, struct elem *node ) {
   else {
       queue->end = add( queue->end, node );
 
-      if( isempty( queue->top ) == 1 )
+      if( isempty( queue->top ) )
           queue->top = queue->end;
       res = queue;
   }
