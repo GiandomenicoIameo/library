@@ -45,7 +45,25 @@ an algorithm that merges input lists (either linked lists )
 top1 and top2 into a new list top3. */
 
 struct elem *concatenate( struct elem *top1, struct elem *top2 );
-struct elem *merge( struct elem *top1, struct elem *top2 );
 struct elem *clear( struct elem *top );
+
+struct elem *merge( struct elem *top1, struct elem *top2 );
+
+/* This merge algorithm is used repeatedly in the merge sort algorithm.
+
+The first element of both lists is compared. If sorting in
+ascending order, the smaller element among two becomes a new
+element of the sorted list. This procedure is repeated until
+both the smaller sublists are empty and the newly combined sublist
+covers all the elements of both the sublists.
+
+The algorithm assumes that the two lists are ordered
+
+In the merge sort algorithm, this subroutine is typically
+used to merge two sub-arrays A[p...q], A[q+1...r] of a single
+array A. This can be done by copying the sub-arrays into a
+temporary array, then applying the merge algorithm above. The allocation
+of a temporary array can be avoided, but at the expense
+of speed and programming ease.  */
 
 #endif
