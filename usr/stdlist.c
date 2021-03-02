@@ -37,6 +37,19 @@ struct elem *append( struct elem *top, struct elem *node ) {
   return res;
 }
 
+unsigned int len( struct elem *top ) {
+
+  unsigned int res;
+
+  if( top == NULL ) {
+          res = 0;
+  } else {
+          res = len( top->next );
+          res = res + 1;
+  }
+  return res;
+}
+
 struct elem *inorder( struct elem *top, struct elem *node ) {
 
   struct elem *res;

@@ -76,6 +76,8 @@ node. Then we insert new node to the end of the list.
 Note that we have to consider special cases such as
 list being empty. */
 
+unsigned int len( struct elem *top );
+
 struct elem *inorder( struct elem *top, struct elem *node );
 
 // Description inorder()
