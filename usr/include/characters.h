@@ -8,7 +8,6 @@
 #ifndef _CHARACTERS_H
 #define _CHARACTERS_H
 
-#include <stdio.h>
 #include <ctype.h>
 #include <string.h>
 

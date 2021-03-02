@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "include/characters.h"
 
 char isvowel( char c ) {
