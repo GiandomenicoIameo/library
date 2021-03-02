@@ -39,10 +39,9 @@ struct elem *copy( struct elem *top );
 struct elem *max( struct elem *top );
 struct elem *min( struct elem *top );
 
-/* Merging two lists into one is done in linear time
-(depending on the data access model). The following code demonstrates
-an algorithm that merges input lists (either linked lists )
-top1 and top2 into a new list top3. */
+/* The concatenation of two lists into one occurs in linear time
+(depending on the data access model). The following code shows
+an algorithm that combines top1 and top2 input lists into a new top3 list. */
 
 struct elem *concatenate( struct elem *top1, struct elem *top2 );
 struct elem *clear( struct elem *top );
