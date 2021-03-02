@@ -113,6 +113,14 @@ struct elem *copy( struct elem *top );
 struct elem *max( struct elem *top );
 struct elem *min( struct elem *top );
 
+struct elem *reverse( struct elem *succ, struct elem *prec );
+
+// Complexity reverse()
+
+/* the time complexity of the above solution in
+O(n), where n is the total number of nodes
+in the linked list, but require any extra space with space complexity O(n). */
+
 struct elem *concatenate( struct elem *top1, struct elem *top2 );
 
 // Description concatenate()

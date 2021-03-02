@@ -114,6 +114,19 @@ struct elem *address( struct elem *top, int key ) {
   return res;
 }
 
+struct elem *reverse( struct elem *succ, struct elem *prec ) {
+
+  struct elem *res;
+
+  if( !succ ) {
+          res = prec;
+  } else {
+          res = reverse( succ->next, succ );
+          succ->next = prec;
+  }
+  return res;
+}
+
 struct elem *copy( struct elem *top ) {
 
   struct elem *res;
