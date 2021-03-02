@@ -16,7 +16,7 @@ struct elem *create( int key ) {
 
 struct elem *push( struct elem *top, struct elem *node ) {
 
-  if( top == NULL ) {
+  if( !top ) {
           top = node;
   } else {
           node->next = top;
@@ -29,7 +29,7 @@ struct elem *append( struct elem *top, struct elem *node ) {
 
   struct elem *res;
 
-  if( top == NULL ) {
+  if( !top ) {
           res = node;
   } else {
           top->next = append( top->next, node );
@@ -42,7 +42,7 @@ struct elem *inorder( struct elem *top, struct elem *node ) {
 
   struct elem *res;
 
-  if( top == NULL ) {
+  if( !top ) {
           res = node;
   } else {
           if( top->data > node->data ) {
@@ -60,7 +60,7 @@ struct elem *delete( struct elem *top, int key ) {
 
   struct elem *res;
 
-  if( top == NULL ) {
+  if( !top ) {
           res = top;
   } else {
           if( top->data == key ) {
@@ -78,7 +78,7 @@ struct elem *pop( struct elem *top ) {
 
   struct elem *res;
 
-  if( top == NULL ) {
+  if( !top ) {
           res = top;
   } else {
           res = top->next;
@@ -91,7 +91,7 @@ struct elem *address( struct elem *top, int key ) {
 
   struct elem *res;
 
-  if( top == NULL ) {
+  if( !top ) {
           res = top;
   } else {
           if( top->data == key )
@@ -107,9 +107,10 @@ struct elem *copy( struct elem *top ) {
   struct elem *res;
   struct elem *node;
 
-  if( top == NULL ) {
+  if( !top ) {
           res = top;
-  } else {
+  }
+  else {
           node = create( top->data );
           node->next = copy( top->next );
           res = node;
@@ -121,12 +122,12 @@ struct elem *max( struct elem *top ) {
 
   struct elem *res;
 
-  if( top == NULL ) {
+  if( !top ) {
           res = top;
   } else {
           res = max( top->next );
 
-          if( res == NULL ) {
+          if( !res ) {
                   res = top;
           } else {
                   if( top->data > res->data )
@@ -140,12 +141,12 @@ struct elem *min( struct elem *top ) {
 
   struct elem *res;
 
-  if( top == NULL ) {
+  if( !top ) {
           res = top;
   } else {
           res = min( top->next );
 
-          if( res == NULL ) {
+          if( !res ) {
                   res = top;
           } else {
                  if( top->data < res->data )
@@ -160,7 +161,7 @@ struct elem *concatenate( struct elem *top1, struct elem *top2 ) {
 
   struct elem *res;
 
-  if( top1 == NULL ) {
+  if( !top1 ) {
           res = top2;
   } else {
           top1->next = concatenate( top1->next, top2 );
@@ -173,8 +174,8 @@ struct elem *merge( struct elem *top1, struct elem *top2 ) {
 
   struct elem *res;
 
-  if( top1 == NULL || top2 == NULL ) {
-          if( top1 == NULL )
+  if( !top1 || !top2 ) {
+          if( !top1 )
                   res = top1;
           else
                   res = top2;
@@ -194,7 +195,7 @@ struct elem *clear( struct elem *top ) {
 
   struct elem *res;
 
-  if( top == NULL ) {
+  if( !top ) {
           res = top;
   } else {
           res = clear( top->next );
@@ -205,7 +206,7 @@ struct elem *clear( struct elem *top ) {
 
 int isempty( void *list ) {
 
-  if( list == NULL )
+  if( !list )
        return 1;
   return 0;
 }
@@ -215,7 +216,7 @@ struct equeue *init( void ) {
   struct equeue *queue;
 
   queue = ( struct equeue* )malloc( sizeof( struct equeue ) );
-  if( queue == NULL ) return queue;
+  if( !queue ) return queue;
 
   queue->top = NULL;
   queue->end = NULL;
@@ -227,7 +228,7 @@ static struct elem *add( struct elem *end, struct elem *node ) {
 
   struct elem *res;
 
-  if( end == NULL ) {
+  if( !end ) {
           res = node;
   } else {
           end->next = node;
@@ -240,7 +241,7 @@ struct equeue *enqueue( struct equeue *queue, struct elem *node ) {
 
   struct equeue *res;
 
-  if( queue == NULL ) {
+  if( !queue ) {
           res = queue;
   } else {
           queue->end = add( queue->end, node );
@@ -256,7 +257,7 @@ struct equeue *denqueue( struct equeue *queue ) {
 
   struct equeue *res;
 
-  if( queue == NULL ) {
+  if( !queue ) {
           res = queue;
   } else {
           queue->top = pop( queue->top );
