@@ -202,18 +202,10 @@ struct elem *clear( struct elem *top ) {
   return res;
 }
 
-int isempty( struct equeue *queue ) {
+int isempty( void *list ) {
 
-  int res;
-
-  if( queue == NULL )
-      res = -1;
-  else {
-      if( queue->top == NULL )
-          res = 1;
-      else res = 0;
-  }
-  return res;
+  if( list == NULL ) return 1;
+  return 0;
 }
 
 struct equeue *init( void ) {
@@ -251,7 +243,7 @@ struct equeue *enqueue( struct equeue *queue, struct elem *node ) {
   else {
       queue->end = add( queue->end, node );
 
-      if( isempty( queue ) == 1 )
+      if( isempty( queue->top ) == 1 )
           queue->top = queue->end;
       res = queue;
   }
