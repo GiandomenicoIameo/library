@@ -1,6 +1,6 @@
 #include "include/stdlist.h"
 
-struct elem *create( int key ) {
+struct elem *allocate( int key ) {
 
   struct elem *node;
 
@@ -135,7 +135,7 @@ struct elem *copy( struct elem *top ) {
   if( !top ) {
           res = top;
   } else {
-          node = create( top->data );
+          node = allocate( top->data );
           node->next = copy( top->next );
           res = node;
   }
@@ -234,7 +234,6 @@ int isempty( void *list ) {
        return 1;
   return 0;
 }
-
 
 struct equeue *init( void ) {
 

@@ -25,12 +25,6 @@ struct elem {
     struct elem *next;
 };
 
-/* The nodes of list are connected to each
-other in this form where the value of the
-next variable of the last node is NULL
-i.e. next = NULL, which indicates the
-end of the linked list. */
-
 struct equeue {
     struct elem *top;
     struct elem *end;
@@ -38,9 +32,9 @@ struct equeue {
 
 /* Prototype structure for a simply-linked list data structure. */
 
-struct elem *create( int key );
+struct elem *allocate( int key );
 
-// Description create()
+// Description alloc()
 // memory is allocated for the new node
 
 struct elem *pop( struct elem *top );
