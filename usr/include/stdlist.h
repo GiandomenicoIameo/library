@@ -119,7 +119,7 @@ struct elem *address( struct elem *top, int key );
 struct elem *clear( struct elem *top );
 struct elem *delete( struct elem *top, int key );
 
-/*    Description delete() && clear()
+/*    Description delete() and clear()
  *
  *    Sometimes we must delete a specific node or all from the list
  *    (if exists). It is important that we traverse the list
