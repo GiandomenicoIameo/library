@@ -1,4 +1,4 @@
-#include "include/tree.h"
+#include "../include/tree.h"
 
 struct tree *pose( int data ) {
 

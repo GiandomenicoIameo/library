@@ -1,4 +1,4 @@
-#include "include/characters.h"
+#include "../include/characters.h"
 
 char isvowel( char c ) {
 
@@ -42,20 +42,4 @@ unsigned int strcsp( const char *s ) {
           if( *s == ' ' ) count++;
   }
   return count;
-}
-
-void strpush( char *s, int c ) {
-
-  size_t top = strlen( s );
-
-  s[ top++ ] = c;
-  s[ top ] = '\0';
-}
-
-void strpop( char *s ) {
-
-  size_t top = strlen( s );
-
-  if( top )
-          s[ top - 1 ] = '\0';
 }

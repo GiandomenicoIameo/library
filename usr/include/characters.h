@@ -15,10 +15,4 @@ char isvowel( char c );
 unsigned int strcd( const char *s );
 unsigned int strcsp( const char *s );
 
-/* Mainly the following two basic operations
- are performed in the stack */
-
-void strpush( char *s, int c );
-void strpop( char *s );
-
 #endif
