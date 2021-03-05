@@ -1,4 +1,4 @@
-#include "include/stdlist.h"
+#include "../include/stdlist.h"
 
 struct elem *allocate( int key ) {
 
