@@ -109,16 +109,13 @@ struct tree *bstree( struct tree *root, int data ) {
 
   struct tree *res;
 
-  if( !root ) {
+  if( !root || data == root->data )
           res = root;
-  } else {
-          if( data == root->data )
-                  res = root;
-          else if( data > root->data )
-                  res = bstree( root->right, data );
-          else
-                  res = bstree( root->left, data );
-  }
+  else if( data < root->data )
+          res = bstree( root->left, data );
+  else
+          res = bstree( root->right, data );
+          
   return res;
 }
 
