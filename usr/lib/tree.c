@@ -90,6 +90,27 @@ struct tree *bsmin( struct tree* root ) {
   return res;
 }
 
+int checkup( struct tree *root, int min, int max ) {
+
+  int L, R;
+  int res;
+
+  if( !root ) {
+          res = 1;
+  } else {
+
+          if( min <= root->data && root->data <= max ) {
+                  L = checkup( root->left, min, root->data );
+                  R = checkup( root->right, root->data, max );
+
+                  res = L & R;
+          } else {
+                  res = 0;
+          }
+  }
+  return res;
+}
+
 struct tree *bsmax( struct tree* root ) {
 
   struct tree *res;
@@ -115,7 +136,7 @@ struct tree *bstree( struct tree *root, int data ) {
           res = bstree( root->left, data );
   else
           res = bstree( root->right, data );
-          
+
   return res;
 }
 
