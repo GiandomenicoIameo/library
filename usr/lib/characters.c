@@ -2,6 +2,7 @@
 
 char isvowel( char c ) {
 
+  // La funzione verifica se c è una vocale
   switch( c ) {
 
   case 'a' :
@@ -26,6 +27,8 @@ char isvowel( char c ) {
 
 unsigned int strcd( const char *s ) {
 
+  // strcd = (str)ing (c)ount (d)igit
+  // La funzione conta il numero di cifre in una stringa
   unsigned int count = 0;
 
   for( ; *s != '\0'; s++ ) {
@@ -36,6 +39,8 @@ unsigned int strcd( const char *s ) {
 
 unsigned int strcsp( const char *s ) {
 
+  // strcsp = (str)ing (c)ount (sp)ace
+  // La funzione conta il numero di spazi in una stringa
   unsigned int count = 0;
 
   for( ; *s != '\0'; s++ ) {
