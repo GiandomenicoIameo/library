@@ -104,7 +104,7 @@ Y = a ;
 false.
 ```
 
-Nel secondo caso, il predicato ha ricercato le permutazioni, poichè la cardinalità dei raggruppamenti è pari al numero di oggetti.
+Nel secondo caso, il predicato ha ricercato le permutazioni : la cardinalità dei raggruppamenti è pari al numero di oggetti.
 
 
 
