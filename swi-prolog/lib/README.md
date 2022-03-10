@@ -105,7 +105,18 @@ Y = a ;
 false.
 ```
 
-Nel secondo caso, il predicato ha ricercato solo le permutazioni : è possibilie notare che la cardinalità dei raggruppamenti è pari al numero di oggetti. Come per il primo predicato, anche questo secondo, è in grado di verificare se un raggruppamento è una possibile disposizione di elementi generata dall'insieme di partenza.
+Nel secondo caso, il predicato ha ricercato solo le permutazioni : è possibilie notare che la cardinalità dei raggruppamenti è pari al numero di oggetti. Il predicato consente anche di ricercare ogni possibile insieme ```A``` di cui ```B``` è un suo raggruppamento :
+
+```prolog
+?- permutation( X, [ a,b ] ).
+X = [a, b|_4558] ;
+X = [a, _4556, b|_4564] ;
+X = [a, _4556, _4568, b|_4576] ;
+X = [a, _4556, _4568, _4580, b|_4588] ;
+X = [a, _4556, _4568, _4580, _4592, b|_4600] 
+```
+
+Come per il primo predicato, anche questo secondo, è in grado di verificare se un raggruppamento è una possibile disposizione di elementi generata dall'insieme di partenza.
 
 ```prolog
 ?- permutation( [ a,b,c ], [ a,b ] ).
