@@ -44,6 +44,17 @@ X = [a, _3194, _3200, _3206, b|_3214] ;
 In questo caso, sono stati ricercati tutti i soprainsiemi dell'insieme 
 ```[a, b]``` e cioè tutti gli insieme ```X``` tali che,```X``` contiene ```[a, b]``` come parte. Ovviamente i risultati non avranno fine.
 
+Inoltre, come è facilmente intuibilie, è anche possibile utilizzare il predicato con il solo scopo di verificare che un insieme ```A``` è sottoinsieme di un certo insieme ```B```, quindi ```B``` risulterà essere soprainsieme di ```A```.
+
+```prolog
+?- binomial( [ a,b,c ], [ a,b ] ).
+true.
+
+?- binomial( [ a,b ], [ a,b,d ] ).
+false.
+```
+
+
 ----------
 __*N.B.*__ Il predicato ```binomial/2``` suppone per ipotesi che l'insieme ricevuto come argomento sia effettivamente un insieme. Tuttavia, se il predicato riceverà in input una ennupla ordinata in cui compaiono elementi ripetuti, i risultati che produrrà potrebbero essere non quelli desiderati : verranno generati insiemi con elementi ripetuti. Per ovviare a ciò, è possibile utilizzare il predicato ```generate_binomial/2``` :
 
