@@ -63,6 +63,34 @@ false.
 ```permutation/2```:
 ---
 
+Il predicato ```permutation/2``` consente di ricercare ogni raggruppamento di oggetti, la cui cardinalità non supera il numero di tali oggetti. Nel caso in cui la cardinalità di ogni raggruppamento è strettamente inferiore al numero di oggetti in questione, si parlerà di disposizioni mentre nell'altro caso si parlerà di permutazioni. Anche questo predicato è multidirezionale, quindi può essere utilizzato per vari scopi :
+
+Ricercare tutti i possibili raggruppamenti di n oggetti di cardinalità non superiore a n :
+
+```prolog
+?- permutation( [ a,b,c ], X ).
+X = [] ;
+X = [a] ;
+X = [a, b] ;
+X = [a, b, c] ;
+X = [a, c] ;
+X = [a, c, b] ;
+X = [b] ;
+X = [b, a] ;
+X = [b, a, c] ;
+X = [b, c] ;
+X = [b, c, a] ;
+X = [c] ;
+X = [c, a] ;
+X = [c, a, b] ;
+X = [c, b] ;
+X = [c, b, a] ;
+false.
+```
+
+
+
+
 __*N.B.*__ Il predicato ```binomial/2``` suppone per ipotesi che l'insieme ricevuto come argomento sia effettivamente un insieme. Tuttavia, se il predicato riceverà in input una ennupla ordinata in cui compaiono elementi ripetuti, i risultati che produrrà potrebbero essere non quelli desiderati : verranno generati insiemi con elementi ripetuti. Per ovviare a ciò, è possibile utilizzare il predicato ```generate_binomial/2``` :
 
 ```prolog
