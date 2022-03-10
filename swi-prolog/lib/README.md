@@ -3,32 +3,33 @@
 ## ```binomial/2```:
 
 Il predicato ```binomial/2``` consente di ricercare il numero dei sottoinsiemi, di un particolare insieme, aventi cardinalità non superiore all’insieme di partenza. Oltre a ciò, come accade spesso nel linguaggio Prolog, tale predicato è anche bidirezionale. Infatti, può essere utilizzato per :
-+ __*Ricercare*__ tutti i possibili sottoinsiemi di un insieme di partenza ( insieme delle parti ) :
+Ricercare tutti i possibili sottoinsiemi di un insieme di partenza ( insieme delle parti ) :
 
-  ```prolog
-  ?- binomial( [ a,b,c ], X ).
-  X = [] ;
-  X = [a] ;
-  X = [a, b] ;
-  X = [a, b, c] ;
-  X = [a, c] ;
-  X = [b] ;
-  X = [b, c] ;
-  X = [c] ;
-  false. 
-  ```
-+ __*Ricercare*__ solo i sottoinsiemi di cardinalità k:
+```prolog
+?- binomial( [ a,b,c ], X ).
+X = [] ;
+X = [a] ;
+X = [a, b] ;
+X = [a, b, c] ;
+X = [a, c] ;
+X = [b] ;
+X = [b, c] ;
+X = [c] ;
+false. 
+```
+Ricercare solo i sottoinsiemi di cardinalità k:
 
-  ```prolog
-  ?- binomial( [ a,b,c ], [ X,Y ] ). /* ricerca i sottoinsiemi di [ a,b,c ] di cardinalità 2. */
-  X = a,
-  Y = b ;
-  X = a,
-  Y = c ;
-  X = b,
-  Y = c ;
-  false.
-  ```
+```prolog
+?- binomial( [ a,b,c ], [ X,Y ] ). /* ricerca i sottoinsiemi di [ a,b,c ] di cardinalità 2. */
+X = a,
+Y = b ;
+X = a,
+Y = c ;
+X = b,
+Y = c ;
+false.
+```
+
 Ritornando al concetto di bidirezionalità, il predicato può essere usato per ricercare tutti i soprainsiemi di un certo insieme :
 
 ```prolog
