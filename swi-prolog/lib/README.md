@@ -2,6 +2,7 @@ Calcolo combinatorio
 ===
 
 * <small>testo piccolo</small>
+* <big>testo grande </big>
 
 ***
 
