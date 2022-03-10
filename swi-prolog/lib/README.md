@@ -61,7 +61,7 @@ false.
 ```permutation/2```:
 ---
 
-Il predicato ```permutation/2``` consente di ricercare ogni raggruppamento di oggetti, la cui cardinalità non supera il numero di tali oggetti. Nel caso in cui la cardinalità di ogni raggruppamento è strettamente inferiore al numero di oggetti in questione, si parlerà di disposizioni mentre nell'altro caso si parlerà di permutazioni. Anche questo predicato è multidirezionale, quindi può essere utilizzato per vari scopi :
+Il predicato ```permutation/2``` consente di ricercare ogni raggruppamento di oggetti, la cui cardinalità non supera il numero di tali oggetti. ogni sottoinsieme ordinato di ```k``` elementi estratti da un insieme di ```n``` elementi, i sottoinsiemi possono differire almeno in un elemento oppure, in presenza degli stessi elementi, nel modo in cui sono ordinati. Se nei sottoinsiemi non sono ammessi elementi ripetuti si parla di **disposizioni semplici** altrimenti di **disposizioni con ripetizione**: nel primo caso deve essere ```k ≤ n``` :
 
 Ricercare tutti i possibili raggruppamenti di n oggetti di cardinalità non superiore a ```n``` :
 
@@ -124,10 +124,9 @@ true.
 false.
 ```
 
+***
 
-
-
-__*N.B.*__ Il predicato ```binomial/2``` suppone per ipotesi che l'insieme ricevuto come argomento sia effettivamente un insieme. Tuttavia, se il predicato riceverà in input una ennupla ordinata in cui compaiono elementi ripetuti, i risultati che produrrà potrebbero essere non quelli desiderati : verranno generati insiemi con elementi ripetuti. Per ovviare a ciò, è possibile utilizzare il predicato ```generate_binomial/2``` :
+__*N.B.*__ I predicati ```binomial/2``` suppongono per ipotesi che l'insieme ricevuto come argomento sia effettivamente un insieme. Tuttavia, ciò non dovrebbe risultare un problema per il predicato ```permutation/2``` se il predicato riceverà in input una ennupla ordinata in cui compaiono elementi ripetuti, i risultati che produrrà potrebbero essere non quelli desiderati : verranno generati insiemi con elementi ripetuti. Per ovviare a ciò, è possibile utilizzare il predicato ```generate_binomial/2``` :
 
 ```prolog
 ?- generate_binomial( [ a,b,c,a,c ], X ).
