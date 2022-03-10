@@ -1,6 +1,8 @@
 Calcolo combinatorio
 ===
 
+* <small>testo piccolo</small>
+
 ***
 
 ```binomial/2```:
