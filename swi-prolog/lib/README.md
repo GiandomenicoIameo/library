@@ -124,9 +124,11 @@ true.
 false.
 ```
 
->__N.B.__ : 
+>__N.B.__
 >
-> Il predicato ```binomial/2``` suppone per ipotesi che l'insieme ricevuto come argomento sia effettivamente un insieme. Tuttavia, se per assurdo il > predicato > > dovesse ricevere in input una ennupla ordinata in cui compaiono elementi ripetuti, i risultati che produrrà potrebbero essere non quelli desiderati : > verranno > generati insiemi con elementi ripetuti. Per ovviare a ciò, è possibile utilizzare il predicato ```generate_binomial/2``` :
+> Il predicato ```binomial/2``` suppone per ipotesi che l'insieme ricevuto come argomento sia effettivamente un insieme. Tuttavia, se per assurdo il > predicato > > dovesse ricevere in input una ennupla ordinata in cui compaiono elementi ripetuti, i risultati che produrrà potrebbero essere non quelli desiderati : > verranno > generati insiemi con elementi ripetuti.
+
+Per ovviare a ciò, è possibile utilizzare il predicato ```generate_binomial/2``` :
 
 ```prolog
 ?- generate_binomial( [ a,b,c,a,c ], X ).
