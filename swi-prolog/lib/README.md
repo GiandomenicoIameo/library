@@ -20,7 +20,7 @@ Il predicato ```binomial/2``` consente di ricercare il numero dei sottoinsiemi, 
 + __*Ricercare*__ solo i sottoinsiemi di cardinalità k:
 
   ```prolog
-  ?- binomial( [ a,b,c ], [ X,Y ] ).
+  ?- binomial( [ a,b,c ], [ X,Y ] ). /* ricerca i sottoinsiemi di [ a,b,c ] di cardinalità 2. */
   X = a,
   Y = b ;
   X = a,
