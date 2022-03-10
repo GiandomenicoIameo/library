@@ -20,7 +20,7 @@ false.
 Ricercare solo i sottoinsiemi di cardinalità k:
 
 ```prolog
-?- binomial( [ a,b,c ], [ X,Y ] ). /* ricerca i sottoinsiemi di [ a,b,c ] di cardinalità 2. */
+?- binomial( [ a,b,c ], [ X,Y ] ). /* il predicato ricerca i sottoinsiemi di [ a,b,c ] di cardinalità 2. */
 X = a,
 Y = b ;
 X = a,
