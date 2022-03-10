@@ -22,7 +22,7 @@ X = [b, c] ;
 X = [c] ;
 false. 
 ```
-Ricercare solo i sottoinsiemi di cardinalità k:
+Ricercare solo i sottoinsiemi di cardinalità ```k``` :
 
 ```prolog
 ?- binomial( [ a,b,c ], [ X,Y ] ). /* il predicato ricerca i sottoinsiemi di [ a,b,c ] di cardinalità 2. */
@@ -63,7 +63,7 @@ false.
 
 Il predicato ```permutation/2``` consente di ricercare ogni raggruppamento di oggetti, la cui cardinalità non supera il numero di tali oggetti. Nel caso in cui la cardinalità di ogni raggruppamento è strettamente inferiore al numero di oggetti in questione, si parlerà di disposizioni mentre nell'altro caso si parlerà di permutazioni. Anche questo predicato è multidirezionale, quindi può essere utilizzato per vari scopi :
 
-Ricercare tutti i possibili raggruppamenti di n oggetti di cardinalità non superiore a n :
+Ricercare tutti i possibili raggruppamenti di n oggetti di cardinalità non superiore a ```n``` :
 
 ```prolog
 ?- permutation( [ a,b,c ], X ).
@@ -86,7 +86,7 @@ X = [c, b, a] ;
 false.
 ```
 
-Ricercare tutti i possibili raggruppamenti di n oggetti di cardinalità k :
+Ricercare tutti i possibili raggruppamenti di ```n``` oggetti di cardinalità ```k``` :
 
 ```prolog
 ?- permutation( [ a,b ], [ X ] ). /* il predicato ricerca i raggruppamenti di cardinalità 1. */
