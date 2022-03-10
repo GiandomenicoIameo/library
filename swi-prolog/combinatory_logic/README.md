@@ -1,4 +1,4 @@
-Calcolo combinatorio
+Combinatory logic
 ===
 
 ***
