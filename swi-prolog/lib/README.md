@@ -105,9 +105,7 @@ Y = a ;
 false.
 ```
 
-Nel secondo caso, il predicato ha ricercato solo le permutazioni : è possibilie notare che la cardinalità dei raggruppamenti è pari al numero di oggetti.
-
-Come per il primo predicato, anche questo secondo, è in grado di verificare se un dato insieme è un raggruppamento di un insieme di partenza.
+Nel secondo caso, il predicato ha ricercato solo le permutazioni : è possibilie notare che la cardinalità dei raggruppamenti è pari al numero di oggetti. Come per il primo predicato, anche questo secondo, è in grado di verificare se un raggruppamento è una possibile disposizione di elementi generata dall'insieme di partenza.
 
 ```prolog
 ?- permutation( [ a,b,c ], [ a,b ] ).
