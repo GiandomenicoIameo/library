@@ -17,18 +17,18 @@ Il predicato ```binomial/2``` consente di ricercare il numero dei sottoinsiemi, 
   X = [c] ;
   false. 
   ```
-Tuttavia, è possibile imporre al programma di ricercare solo sottoinsiemi di cardinalità 2 :
++ __*Ricercare*__ solo i sottoinsiemi di cardinalità k:
 
-```prolog
-?- binomial( [ a,b,c ], [ X,Y ] ).
-X = a,
-Y = b ;
-X = a,
-Y = c ;
-X = b,
-Y = c ;
-false.
-```
+  ```prolog
+  ?- binomial( [ a,b,c ], [ X,Y ] ).
+  X = a,
+  Y = b ;
+  X = a,
+  Y = c ;
+  X = b,
+  Y = c ;
+  false.
+  ```
 Ritornando al concetto di bidirezionalità, il predicato può essere usato per ricercare tutti i soprainsiemi di un certo insieme :
 
 ```prolog
