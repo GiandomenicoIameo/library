@@ -92,12 +92,12 @@ false.
 Ricercare tutti i possibili raggruppamenti di n oggetti di cardinalità k :
 
 ```prolog
-?- permutation( [ a,b ], [ X ] ).
+?- permutation( [ a,b ], [ X ] ). /* il predicato ricerca i raggruppamenti di cardinalità 1. */
 X = a ;
 X = b ;
 false.
 
-?- permutation( [ a,b ], [ X,Y ] ).
+?- permutation( [ a,b ], [ X,Y ] ). /* il predicato ricerca i raggruppamenti di cardinalità 2. */
 X = a,
 Y = b ;
 X = b,
