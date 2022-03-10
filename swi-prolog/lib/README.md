@@ -44,7 +44,7 @@ X = [a, _3194, _3200, _3206, b|_3214] ;
 In questo caso, sono stati ricercati tutti i soprainsiemi dell'insieme 
 ```[a, b]``` e cioè tutti gli insieme ```X``` tali che,```X``` contiene ```[a, b]``` come parte. Ovviamente i risultati non avranno fine.
 
-Inoltre, come è facilmente intuibile, è anche possibile utilizzare il predicato con il solo scopo di verificare che un insieme ```A``` è sottoinsieme di un certo insieme ```B```.
+Inoltre, come è facilmente intuibile, è anche possibile utilizzare il predicato con il solo scopo di verificare che un insieme ```A``` sia sottoinsieme di un certo insieme ```B```.
 
 ```prolog
 ?- binomial( [ a,b,c ], [ a,b ] ). /* il predicato verifica se [ a,b ] è incluso in [ a,b,c ] */
