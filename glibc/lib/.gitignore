@@ -1,0 +1,4 @@
+*.o
+characters
+list
+bstree
