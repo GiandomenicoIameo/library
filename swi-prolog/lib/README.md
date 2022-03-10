@@ -58,9 +58,6 @@ true.
 false.
 ```
 
-
-
-
 ```permutation/2```:
 ---
 
