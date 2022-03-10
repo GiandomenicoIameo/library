@@ -2,6 +2,7 @@
 
 ## ```binomial/2```:
 
+<span style="color:#fff; font-family: 'Bebas Neue'; font-size: 4em;">INSPIRATION DAY</span>
 Il predicato ```binomial/2``` consente di ricercare il numero dei sottoinsiemi, di un particolare insieme, aventi cardinalità non superiore all’insieme di partenza. Oltre a ciò, come accade spesso nel linguaggio Prolog, tale predicato è anche bidirezionale. Infatti, può essere utilizzato per :
 
 Ricercare tutti i possibili sottoinsiemi di un insieme di partenza ( insieme delle parti ) :
