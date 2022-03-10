@@ -114,6 +114,7 @@ X = [a, _4556, b|_4564] ;
 X = [a, _4556, _4568, b|_4576] ;
 X = [a, _4556, _4568, _4580, b|_4588] ;
 X = [a, _4556, _4568, _4580, _4592, b|_4600] 
+...
 ```
 
 Come per il primo predicato, anche questo secondo, è in grado di verificare se un raggruppamento è una possibile disposizione di elementi generata dall'insieme di partenza.
