@@ -42,7 +42,7 @@ possono crescere e ridursi al momento dell'esecuzione.
 Ricordate che una _struttura autoreferenziale_ contiene un membro puntatore
 che punta a una struttura dello stesso tipo. Le definizioni sono le seguenti :
 
-```
+```c
 // Struttura del nodo
 struct elem {
     int data;
@@ -66,7 +66,7 @@ Qui di seguito vi presentiamo un esempio di scrittura del codice :
 Funzione pop :
 ----------
 
-```
+```c
 struct elem *pop( struct elem *top ) {
 
   struct elem *res;
