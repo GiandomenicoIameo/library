@@ -88,6 +88,24 @@ X = [c, b, a] ;
 false.
 ```
 
+Ricercare tutti i possibili raggruppamenti di n oggetti di cardinalità k :
+
+```prolog
+?- permutation( [ a,b ], [ X ] ).
+X = a ;
+X = b ;
+false.
+
+?- permutation( [ a,b ], [ X,Y ] ).
+X = a,
+Y = b ;
+X = b,
+Y = a ;
+false.
+```
+
+Nel secondo caso, il predicato ha ricercato le permutazioni, poichè la cardinalità dei raggruppamenti è pari al numero di oggetti.
+
 
 
 
