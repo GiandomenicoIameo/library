@@ -22,7 +22,7 @@ X = [b, c] ;
 X = [c] ;
 false. 
 ```
-Ricercare solo i sottoinsiemi di cardinalità ```k``` :
+Ricercare solo i sottoinsiemi di cardinalità `k` :
 
 ```prolog
 ?- binomial( [ a,b,c ], [ X,Y ] ). /* il predicato ricerca i sottoinsiemi di [ a,b,c ] di cardinalità 2. */
@@ -34,20 +34,6 @@ X = b,
 Y = c ;
 false.
 ```
-
-Ricercare ogni possibile soprainsieme di un certo insieme dato come input :
-
-```prolog
-?- binomial( X, [ a,b ] ).
-X = [a, b|_3196] ;
-X = [a, _3194, b|_3202] ;
-X = [a, _3194, _3200, b|_3208] ;
-X = [a, _3194, _3200, _3206, b|_3214] ;
-...
-```
-In questo caso, sono stati ricercati tutti i soprainsiemi dell'insieme 
-```[a, b]``` e cioè tutti gli insieme ```X``` tali che,```X``` contiene ```[a, b]``` come parte. Ovviamente i risultati non avranno fine.
-
 Inoltre, come è facilmente intuibile, è anche possibile utilizzare il predicato con il solo scopo di verificare che un insieme ```A``` sia sottoinsieme di un certo insieme ```B```.
 
 ```prolog
