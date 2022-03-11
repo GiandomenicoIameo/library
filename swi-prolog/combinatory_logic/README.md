@@ -22,7 +22,7 @@ X = [b, c] ;
 X = [c] ;
 false. 
 ```
-Ricercare solo i sottoinsiemi di cardinalità `k` :
+Ricercare solo i sottoinsiemi di cardinalità `k` ( coefficiente binomiale `n` su `k` ) :
 
 ```prolog
 ?- binomial( [ a,b,c ], [ X,Y ] ). /* il predicato ricerca i sottoinsiemi di [ a,b,c ] di cardinalità 2. */
