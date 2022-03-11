@@ -6,7 +6,7 @@ Combinatory logic
 ```binomial/2```:
 ---
 
-Il predicato ```binomial/2``` consente di ricercare il numero dei sottoinsiemi, di un particolare insieme, aventi cardinalità non superiore all’insieme di partenza. Oltre a ciò, come accade spesso nel linguaggio Prolog, tale predicato è anche bidirezionale. Infatti, può essere utilizzato per :
+Il predicato ```binomial/2``` consente di ricercare il numero dei sottoinsiemi, di un particolare insieme, aventi cardinalità non superiore all’insieme di partenza. Oltre a ciò, è possibile utilizzare il predicato per vari scopi :
 
 Ricercare tutti i possibili sottoinsiemi di un insieme di partenza ( insieme delle parti ) :
 
@@ -34,7 +34,7 @@ X = b,
 Y = c ;
 false.
 ```
-Inoltre, come è facilmente intuibile, è anche possibile utilizzare il predicato con il solo scopo di verificare che un insieme ```A``` sia sottoinsieme di un certo insieme ```B```. E' sufficiente scrivere il predicato nel seguente modo :
+Come conseguenza dei due precedenti predicati, è anche possibile utilizzare lo stesso predicato con il solo scopo di verificare che un insieme `A` sia sottoinsieme di un certo insieme `B`. E' sufficiente scrivere il predicato nel seguente modo :
 
 ```prolog
 ?- binomial( [ a,b,c ], [ a,b ] ), !. /* il predicato verifica se [ a,b ] è incluso in [ a,b,c ] */
