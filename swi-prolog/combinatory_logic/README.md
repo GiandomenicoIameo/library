@@ -88,13 +88,13 @@ Y = a ;
 false.
 ```
 
-Nel secondo caso, il predicato ha ricercato dei particolari raggruppamenti chiamati con il nome di **permutazioni**. Come per il primo predicato, anche questo secondo, è in grado di verificare se un raggruppamento è una possibile disposizione di elementi generata dall'insieme di partenza.
+Nel secondo caso, il predicato ha ricercato dei particolari raggruppamenti chiamati con il nome di **permutazioni**. Inoltre, Come per il primo predicato, anche questo secondo, è in grado di verificare se un raggruppamento è una possibile disposizione di elementi generata dall'insieme di partenza. Basta scrivere la query in questo modo :
 
 ```prolog
-?- permutation( [ a,b,c ], [ a,b ] ).
+?- permutation( [ a,b,c ], [ a,b ] ), !.
 true.
 
-?- permutation( [ a,b,c ], [ a,d ] ).
+?- permutation( [ a,b,c ], [ a,d ] ), !.
 false.
 ```
 
