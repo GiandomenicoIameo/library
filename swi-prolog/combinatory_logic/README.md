@@ -34,13 +34,13 @@ X = b,
 Y = c ;
 false.
 ```
-Inoltre, come è facilmente intuibile, è anche possibile utilizzare il predicato con il solo scopo di verificare che un insieme ```A``` sia sottoinsieme di un certo insieme ```B```.
+Inoltre, come è facilmente intuibile, è anche possibile utilizzare il predicato con il solo scopo di verificare che un insieme ```A``` sia sottoinsieme di un certo insieme ```B```. E' sufficiente scrivere il predicato nel seguente modo :
 
 ```prolog
-?- binomial( [ a,b,c ], [ a,b ] ). /* il predicato verifica se [ a,b ] è incluso in [ a,b,c ] */
+?- binomial( [ a,b,c ], [ a,b ] ), !. /* il predicato verifica se [ a,b ] è incluso in [ a,b,c ] */
 true.
 
-?- binomial( [ a,b ], [ a,b,d ] ). /* il predicato verifica se [ a,b,d ] è incluso in [ a,b ] */
+?- binomial( [ a,b ], [ a,b,d ] ), !. /* il predicato verifica se [ a,b,d ] è incluso in [ a,b ] */
 false.
 ```
 
