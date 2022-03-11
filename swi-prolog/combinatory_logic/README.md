@@ -126,7 +126,7 @@ false.
 
 ***
 
->__N.B.__
+>[!NOTE]
 >
 > Il predicato ```binomial/2``` suppone per ipotesi che l'insieme ricevuto come argomento sia effettivamente un insieme. Tuttavia, se per assurdo il predicato dovesse ricevere in input una ennupla ordinata in cui compaiono elementi ripetuti, i risultati che produrrà potrebbero essere non quelli desiderati : verranno generati insiemi con elementi ripetuti.
 
