@@ -6,7 +6,7 @@ Combinatory logic
 ```binomial/2```:
 ---
 
-Il predicato ```binomial/2``` consente di ricercare il numero dei sottoinsiemi, di un particolare insieme, aventi cardinalità non superiore all’insieme di partenza. Oltre a ciò, come accade spesso nel linguaggio Prolog, tale predicato è anche bidirezionale. Infatti, può essere utilizzato per :
+Il predicato ```binomial/2``` consente di ricercare il numero dei sottoinsiemi, di un particolare insieme, aventi cardinalità non superiore all’insieme di partenza. Oltre a ciò, è possibile utilizzare il predicato per vari scopi :
 
 Ricercare tutti i possibili sottoinsiemi di un insieme di partenza ( insieme delle parti ) :
 
@@ -22,7 +22,7 @@ X = [b, c] ;
 X = [c] ;
 false. 
 ```
-Ricercare solo i sottoinsiemi di cardinalità ```k``` :
+Ricercare solo i sottoinsiemi di cardinalità `k` ( coefficiente binomiale `n` su `k` ) :
 
 ```prolog
 ?- binomial( [ a,b,c ], [ X,Y ] ). /* il predicato ricerca i sottoinsiemi di [ a,b,c ] di cardinalità 2. */
@@ -34,27 +34,13 @@ X = b,
 Y = c ;
 false.
 ```
-
-Ricercare ogni possibile soprainsieme di un certo insieme dato come input :
-
-```prolog
-?- binomial( X, [ a,b ] ).
-X = [a, b|_3196] ;
-X = [a, _3194, b|_3202] ;
-X = [a, _3194, _3200, b|_3208] ;
-X = [a, _3194, _3200, _3206, b|_3214] ;
-...
-```
-In questo caso, sono stati ricercati tutti i soprainsiemi dell'insieme 
-```[a, b]``` e cioè tutti gli insieme ```X``` tali che,```X``` contiene ```[a, b]``` come parte. Ovviamente i risultati non avranno fine.
-
-Inoltre, come è facilmente intuibile, è anche possibile utilizzare il predicato con il solo scopo di verificare che un insieme ```A``` sia sottoinsieme di un certo insieme ```B```.
+Come conseguenza dei due precedenti predicati, è anche possibile utilizzare lo stesso predicato con il solo scopo di verificare che un insieme `A` sia sottoinsieme di un certo insieme `B` ( relazione di inclusione ). E' sufficiente scrivere la query nel seguente modo :
 
 ```prolog
-?- binomial( [ a,b,c ], [ a,b ] ). /* il predicato verifica se [ a,b ] è incluso in [ a,b,c ] */
+?- binomial( [ a,b,c ], [ a,b ] ), !. /* il predicato verifica se [ a,b ] è incluso in [ a,b,c ] */
 true.
 
-?- binomial( [ a,b ], [ a,b,d ] ). /* il predicato verifica se [ a,b,d ] è incluso in [ a,b ] */
+?- binomial( [ a,b ], [ a,b,d ] ), !. /* il predicato verifica se [ a,b,d ] è incluso in [ a,b ] */
 false.
 ```
 
@@ -102,33 +88,21 @@ Y = a ;
 false.
 ```
 
-Nel secondo caso, il predicato ha ricercato dei particolari raggruppamenti chiamati con il nome di **permutazioni**. Il predicato consente anche di ricercare ogni possibile insieme ```A``` che genera ```B``` come raggruppamento :
+Nel secondo caso, il predicato ha ricercato dei particolari raggruppamenti chiamati con il nome di **permutazioni**. Inoltre, Come per il primo predicato, anche questo secondo, è in grado di verificare se un raggruppamento è una possibile disposizione di elementi generata dall'insieme di partenza. Basta scrivere la query in questo modo :
 
 ```prolog
-?- permutation( X, [ a,b ] ).
-X = [a, b|_4558] ;
-X = [a, _4556, b|_4564] ;
-X = [a, _4556, _4568, b|_4576] ;
-X = [a, _4556, _4568, _4580, b|_4588] ;
-X = [a, _4556, _4568, _4580, _4592, b|_4600] 
-...
-```
-
-Come per il primo predicato, anche questo secondo, è in grado di verificare se un raggruppamento è una possibile disposizione di elementi generata dall'insieme di partenza.
-
-```prolog
-?- permutation( [ a,b,c ], [ a,b ] ).
+?- permutation( [ a,b,c ], [ a,b ] ), !.
 true.
 
-?- permutation( [ a,b,c ], [ a,d ] ).
+?- permutation( [ a,b,c ], [ a,d ] ), !.
 false.
 ```
 
 ***
 
->__N.B.__
+>NOTE:
 >
-> Il predicato ```binomial/2``` suppone per ipotesi che l'insieme ricevuto come argomento sia effettivamente un insieme. Tuttavia, se per assurdo il predicato dovesse ricevere in input una ennupla ordinata in cui compaiono elementi ripetuti, i risultati che produrrà potrebbero essere non quelli desiderati : verranno generati insiemi con elementi ripetuti.
+> Il predicato ```binomial/2``` suppone per ipotesi che l'insieme ricevuto come argomento sia effettivamente un insieme. Tuttavia, se per assurdo il predicato dovesse ricevere in input una ennupla ordinata in cui compaiono elementi ripetuti, i risultati che produrrà potrebbero essere non quelli desiderati : verranno generati insiemi con elementi ripetuti. Inoltre, il predicato tiene anche conto dell'ordine degli elementi appartenti a un insieme : l'insieme `[ a,b,c ]` verrà visto in modo diverso rispetto all'insieme `[ b,a,c ]`, producendo quindi risultati diversi anche se i due sono perfettamente equivalenti.
 
 ***
 
@@ -147,4 +121,4 @@ X = [c] ;
 false.
 ```
 
-Il predicato ha considerato l'insieme ```[a, b, c, a, c]``` prefettamente equivalente all'insieme ```[a, b, c]```. Nonostante questo vantaggio, lo stesso predicato non è bidirezionale.
+Il predicato ha considerato l'insieme ```[a, b, c, a, c]``` prefettamente equivalente all'insieme ```[a, b, c]```.
