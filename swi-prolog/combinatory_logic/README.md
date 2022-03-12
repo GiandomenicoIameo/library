@@ -6,21 +6,20 @@ Combinatory logic
 ```binomial/2```:
 ---
 
-Il predicato ```binomial/2``` consente di ricercare il numero dei sottoinsiemi, di un particolare insieme, aventi cardinalità non superiore all’insieme di partenza. Oltre a ciò, è possibile utilizzare il predicato per vari scopi :
+Il predicato ```binomial/2``` consente di ricercare il numero dei sottoinsiemi, di un particolare insieme, aventi cardinalità non superiore all’insieme di partenza. Oltre a ciò, come accade spesso nel linguaggio Prolog, il suddetto predicato è bidirezionale, quindi può essere utilizzato per vari scopi :
 
 Ricercare tutti i possibili sottoinsiemi di un insieme di partenza ( insieme delle parti ) :
 
 ```prolog
 ?- binomial( [ a,b,c ], X ).
-X = [] ;
-X = [a] ;
-X = [a, b] ;
 X = [a, b, c] ;
+X = [a, b] ;
 X = [a, c] ;
-X = [b] ;
+X = [a] ;
 X = [b, c] ;
+X = [b] ;
 X = [c] ;
-false. 
+X = [].
 ```
 Ricercare solo i sottoinsiemi di cardinalità `k` ( coefficiente binomiale `n` su `k` ) :
 
@@ -34,7 +33,21 @@ X = b,
 Y = c ;
 false.
 ```
-Come conseguenza dei due precedenti predicati, è anche possibile utilizzare lo stesso predicato con il solo scopo di verificare che un insieme `A` sia sottoinsieme di un certo insieme `B` ( relazione di inclusione ). E' sufficiente scrivere la query nel seguente modo :
+Ricercare tutti i possibili soprainsiemi di un insieme :
+
+```prolog
+?- binomial( X, [ a,b,c ] ).
+X = [a, b, c] ;
+X = [a, b, c, _4378] ;
+X = [a, b, c, _4378, _4384] ;
+X = [a, b, c, _4378, _4384, _4390] ;
+X = [a, b, c, _4378, _4384, _4390, _4396] ;
+X = [a, b, c, _4378, _4384, _4390, _4396, _4402] ;
+X = [a, b, c, _4378, _4384, _4390, _4396, _4402, _4408] 
+...
+```
+Ovviamente i risultati non avranno fine.
+Come conseguenza dei precedenti predicati, è anche possibile utilizzare lo stesso predicato con il solo scopo di verificare che un insieme `A` sia sottoinsieme di un certo insieme `B` ( relazione di inclusione ). E' sufficiente scrivere la query nel seguente modo :
 
 ```prolog
 ?- binomial( [ a,b,c ], [ a,b ] ), !. /* il predicato verifica se [ a,b ] è incluso in [ a,b,c ] */
