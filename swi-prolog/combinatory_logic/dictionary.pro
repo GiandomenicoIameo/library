@@ -1,7 +1,7 @@
 :- include( 'combinatorics.pro' ).
 
-generate_binomial( List, Comb ) :- sort( List, Set ),
-binomial( Set, Comb ).
+generate_binomial( Xs, Zs ) :- sort( Xs, Ys ),
+binomial( Ys, Zs ).
 
-generate_combination( List, Comb ) :- sort( List, Set ),
-combination( Set, Comb ).
+generate_combination( Xs, Zs ) :- sort( Xs, Ys ),
+combination( Ys, Zs ).

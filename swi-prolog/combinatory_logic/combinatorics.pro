@@ -1,20 +1,17 @@
 elem( X, [ X|_ ] ).
-elem( X, [ _|L ] ) :- elem( X, L ).
+elem( X, [ _|Xs ] ) :- elem( X, Xs ).
 
-delete( T, [ T|List ], List ).
-delete( X, [ T|List ], [ T|Rest ] ) :- delete( X, List, Rest ).
+delete( Y, [ Y|Ys ], Ys ).
+delete( X, [ Y|Ys ], [ Y|Zs ] ) :- delete( X, Ys, Zs ).
 
-queue( X, [ X|List ], List ).                                       
-queue( X, [ _|List ], Queue ) :- queue( X, List, Queue ).           
-                                                                    
+binomial( [], [] ).
+binomial( [ X|Xs ], [ X|Ys ] ) :- binomial( Xs, Ys ).
+binomial( [ _|Xs ], Ys ) :- binomial( Xs, Ys ).
+
 permutation( _, [] ).
-permutation( List, [ X|Rest ] ) :- delete( X, List, Comb ),       
-permutation( Comb, Rest ).                                          
-                                                                    
-combination( _, [] ).
-combination( List, [ X|Rest ] ) :- elem( X, List ),
-combination( List, Rest ).
+permutation( Ys, [ X|Xs ] ) :- delete( X, Ys, Zs ),
+permutation( Zs, Xs ).
 
-binomial( _, [] ).
-binomial( List, [ X|Rest ] ) :- queue( X, List, Tail ),
-binomial( Tail, Rest ).
+combination( _, [] ).
+combination( Ys, [ X|Xs ] ) :- elem( X, Ys ),
+combination( Ys, Xs ).
