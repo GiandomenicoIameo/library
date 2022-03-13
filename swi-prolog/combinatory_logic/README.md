@@ -10,7 +10,7 @@ Il predicato ```binomial/2``` consente di ricercare il numero dei sottoinsiemi, 
 
 Ricercare tutti i possibili sottoinsiemi di un insieme di partenza ( insieme delle parti ) :
 
-```PROLOG
+```prolog
 ?- binomial( [ a,b,c ], X ).
 X = [a, b, c] ;
 X = [a, b] ;
