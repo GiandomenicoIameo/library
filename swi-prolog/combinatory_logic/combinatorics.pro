@@ -2,7 +2,7 @@ member( X, [ X|_ ] ).
 member( X, [ _|Xs ] ) :- member( X, Xs ).
 
 delete( X, [ X|Xs ], Xs ).
-delete( X, [ Y|Ys ], [ Y|Zs ] ) :- X \== Y, delete( X, Ys, Zs ).
+delete( X, [ Y|Ys ], [ Y|Zs ] ) :- delete( X, Ys, Zs ).
 
 binomial( [], [] ).
 binomial( [ X|Xs ], [ X|Ys ] ) :- binomial( Xs, Ys ).
