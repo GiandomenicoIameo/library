@@ -1,8 +1,8 @@
-elem( X, [ X|_ ] ).
-elem( X, [ _|Xs ] ) :- elem( X, Xs ).
+member( X, [ X|_ ] ).
+member( X, [ _|Xs ] ) :- member( X, Xs ).
 
 delete( X, [ X|Xs ], Xs ).
-delete( X, [ Y|Ys ], [ Y|Zs ] ) :- delete( X, Ys, Zs ).
+delete( X, [ Y|Ys ], [ Y|Zs ] ) :- X \== Y, delete( X, Ys, Zs ).
 
 binomial( [], [] ).
 binomial( [ X|Xs ], [ X|Ys ] ) :- binomial( Xs, Ys ).
@@ -14,4 +14,4 @@ permutation( Zs, Xs ).
 
 combination( _, [] ).
 combination( Ys, [ X|Xs ] ) :-
-combination( Ys, Xs ), elem( X, Ys ).
+combination( Ys, Xs ), member( X, Ys ).
