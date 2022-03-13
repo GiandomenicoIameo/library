@@ -123,15 +123,14 @@ Per ovviare a ciò, è possibile utilizzare il predicato ```generate_binomial/2`
 
 ```prolog
 ?- generate_binomial( [ a,b,c,a,c ], X ).
-X = [] ;
-X = [a] ;
-X = [a, b] ;
 X = [a, b, c] ;
+X = [a, b] ;
 X = [a, c] ;
-X = [b] ;
+X = [a] ;
 X = [b, c] ;
+X = [b] ;
 X = [c] ;
-false.
+X = [].
 ```
 
 Il predicato ha considerato l'insieme ```[a, b, c, a, c]``` prefettamente equivalente all'insieme ```[a, b, c]```.
