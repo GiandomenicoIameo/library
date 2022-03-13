@@ -134,3 +134,6 @@ X = [].
 ```
 
 Il predicato ha considerato l'insieme ```[a, b, c, a, c]``` prefettamente equivalente all'insieme ```[a, b, c]```.
+
+```combination/2```:
+---
