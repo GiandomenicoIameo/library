@@ -85,6 +85,20 @@ X = [c, b, a] ;
 false.
 ```
 
+Ricercare ogni possibile insieme, il quale può generare un raggruppamento dato come input :
+
+```prolog
+?- permutation( [ X,Y ], [ a,b ] ).
+X = a,
+Y = b ;
+X = b,
+Y = a ;
+false.
+
+?- permutation( [ X ], [ a,b ] ).
+false.
+```
+
 Ricercare tutti i possibili raggruppamenti di ```n``` oggetti di cardinalità ```k``` :
 
 ```prolog
@@ -108,20 +122,6 @@ Nel secondo caso, il predicato ha ricercato dei particolari raggruppamenti chiam
 true.
 
 ?- permutation( [ a,b,c ], [ a,d ] ), !.
-false.
-```
-
-Ricercare ogni possibile insieme dal quale è possibile generate un raggruppamento dato come input :
-
-```prolog
-?- permutation( [ X,Y ], [ a,b ] ).
-X = a,
-Y = b ;
-X = b,
-Y = a ;
-false.
-
-?- permutation( [ X ], [ a,b ] ).
 false.
 ```
 
