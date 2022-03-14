@@ -174,8 +174,4 @@ X = [0, 1, 1] ;
 X = [1, 1, 1] ;
 ...
 ```
-Il programma non terminerà mai : il predicato ricercherà tutte le n-uple ordinate del prodotto cartesiano di infiniti insiemi ```[ 0,1 ] x [ 0,1 ] x [ 0,1 ] x ... x [ 0,1 ] ...```
-
-
-
-
+Il programma non terminerà mai : il predicato ricercherà tutte le n-uple ordinate del prodotto cartesiano di `n` insiemi, e dove lo stesso `n` varia da `0` a infinito.
