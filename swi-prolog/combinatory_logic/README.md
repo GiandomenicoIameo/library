@@ -111,6 +111,20 @@ true.
 false.
 ```
 
+Ricercare ogni possibile insieme dal quale è possibile generate un raggruppamento dato come input :
+
+```prolog
+?- permutation( [ X,Y ], [ a,b ] ).
+X = a,
+Y = b ;
+X = b,
+Y = a ;
+false.
+
+?- permutation( [ X ], [ a,b ] ).
+false.
+```
+
 ***
 
 >NOTE:
