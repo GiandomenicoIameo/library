@@ -1,4 +1,4 @@
-![ prolog ]( logo/combinatory.png )
+Combinatory logic
 ===
 
 ```binomial/2```:
