@@ -1,8 +1,6 @@
 Combinatory logic
 ===
 
-![prolog](https://faradars.org/wp-content/uploads/2020/09/FVPRM9906-svg.svg)
-
 ***
 
 ```binomial/2```:
