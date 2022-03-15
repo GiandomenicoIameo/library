@@ -82,8 +82,7 @@ X = [c, b] ;
 X = [c, b, a] ;
 false.
 ```
-
-Ricercare ogni possibile insieme, il quale può generare un raggruppamento dato come input :
+Ricercare ogni possibile insieme partendo da un raggruppamento di `n` oggetti dato in input :
 
 ```prolog
 ?- permutation( [ X,Y ], [ a,b ] ).
