@@ -1,7 +1,7 @@
 Combinatory logic
 ===
 
-<font color="red">Testo in rosso</font>
+![prolog](https://aws1.discourse-cdn.com/free1/uploads/swiprolog/original/1X/73ebf150a3746e8f54f93423fb28d18c434847c9.png)
 
 ***
 
