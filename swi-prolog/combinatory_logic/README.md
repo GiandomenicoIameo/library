@@ -1,6 +1,8 @@
 Combinatory logic
 ===
 
+[![npm text][npm-text]][npm]
+
 ```binomial/2```:
 ---
 
