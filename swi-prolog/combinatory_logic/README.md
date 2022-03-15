@@ -1,9 +1,5 @@
-Combinatory logic
-===
-
 ![ prolog ]( logo/combinatory.png )
-
-***
+===
 
 ```binomial/2```:
 ---
