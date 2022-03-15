@@ -42,8 +42,7 @@ X = [a, b, c, _4378, _4384, _4390, _4396, _4402] ;
 X = [a, b, c, _4378, _4384, _4390, _4396, _4402, _4408] 
 ...
 ```
-Ovviamente i risultati non avranno fine.
-+ Come conseguenza dei precedenti predicati, è anche possibile utilizzare lo stesso predicato con il solo scopo di verificare che un insieme `A` sia sottoinsieme di un certo insieme `B` ( relazione di inclusione ). E' sufficiente scrivere la query nel seguente modo :
+Ovviamente i risultati non avranno fine. Come conseguenza dei precedenti predicati, è anche possibile utilizzare lo stesso predicato con il solo scopo di verificare che un insieme `A` sia sottoinsieme di un certo insieme `B` ( relazione di inclusione ). E' sufficiente scrivere la query nel seguente modo :
 
 ```prolog
 ?- binomial( [ a,b,c ], [ a,b ] ), !. /* il predicato verifica se [ a,b ] è incluso in [ a,b,c ] */
