@@ -53,8 +53,7 @@ true.
 false.
 ```
 
-```permutation/2```:
----
+## ```permutation/2```:
 
 Il predicato ```permutation/2``` consente di ricercare ogni raggruppamento di oggetti, la cui cardinalità non supera il numero di tali oggetti. Per ogni sottoinsieme ordinato di ```k``` elementi estratti da un insieme di ```n``` elementi, i vari sottoinsiemi possono differire almeno in un elemento oppure, in presenza degli stessi elementi, nel modo in cui sono ordinati. Anche questo predicato è multidirezionale, quindi può essere utilizzato per vari scopi :
 
@@ -119,8 +118,8 @@ true.
 ?- permutation( [ a,b,c ], [ a,d ] ), !.
 false.
 ```
-Avvertenze:
----
+## Avvertenze:
+
 
 Il predicato ```binomial/2``` suppone per ipotesi che l'insieme ricevuto come argomento sia effettivamente un insieme. Tuttavia, se per assurdo il predicato dovesse ricevere in input una ennupla ordinata in cui compaiono elementi ripetuti, i risultati che produrrà potrebbero essere non quelli desiderati : verranno generati insiemi con elementi ripetuti. Inoltre, il predicato tiene anche conto dell'ordine degli elementi appartenti a un insieme : l'insieme `[ a,b,c ]` verrà visto in modo diverso rispetto all'insieme `[ b,a,c ]`, producendo quindi risultati diversi anche se i due sono perfettamente equivalenti.
 
@@ -140,8 +139,8 @@ X = [].
 
 Il predicato ha considerato l'insieme `[a, b, c, a, c]` prefettamente equivalente all'insieme `[a, b, c]`.
 
-```combination/2```:
----
+## ```combination/2```:
+
 Il predicato `combination/2` consente di ricercare il numero di disposizioni con ripetizione di `n` elementi a `k` a `k`. A differenza delle disposizioni semplici, generate dal predicato `permutation/2`, non vale il vincolo `k` minore o uguale a `n`: poiché ogni volta è possibile estrarre dall'insieme qualsiasi elemento senza correre il rischio di catturare duplicati. Inoltre, non esiste pericolo alcuno che questi elementi si esauriscono come capita invece nelle disposizioni semplici in cui, dopo `n` estrazioni, non rimangono nell'insieme più elementi da poter estrarre.
 Come per i precedenti predicati, anche questo è multidirezionale. I prossimi esempi mostreranno in che modo potrà essere utilizzato :
 
