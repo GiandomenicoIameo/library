@@ -156,3 +156,23 @@ Y = 1 ;
 X = Y, Y = 1 ;
 false.
 ```
+
+Ricercare ogni possibile insieme partendo da una disposizione di `n` oggetti dato in input :
+
+```prolog
+?- combination( [ X,Y,Z ], [ 0,1 ] ).
+X = 1,
+Y = 0 ;
+X = 1,
+Z = 0 ;
+X = 0,
+Y = 1 ;
+Y = 1,
+Z = 0 ;
+X = 0,
+Z = 1 ;
+Y = 0,
+Z = 1 ;
+false.
+```
+
