@@ -4,7 +4,7 @@
 
 Il predicato ```binomial/2``` consente di ricercare il numero dei sottoinsiemi, di un particolare insieme, aventi cardinalità non superiore all’insieme di partenza. Oltre a ciò, come accade spesso nel linguaggio Prolog, il suddetto predicato è anche bidirezionale, quindi può essere utilizzato per vari scopi :
 
-Ricercare tutti i possibili sottoinsiemi di un insieme di partenza ( insieme delle parti ) :
++ Ricercare tutti i possibili sottoinsiemi di un insieme di partenza ( insieme delle parti ) :
 
 ```prolog
 ?- binomial( [ a,b,c ], X ).
@@ -17,7 +17,7 @@ X = [b] ;
 X = [c] ;
 X = [].
 ```
-Ricercare solo i sottoinsiemi di cardinalità `k` ( coefficiente binomiale `n` su `k` ) :
++ Ricercare solo i sottoinsiemi di cardinalità `k` ( coefficiente binomiale `n` su `k` ) :
 
 ```prolog
 ?- binomial( [ a,b,c ], [ X,Y ] ). /* il predicato ricerca i sottoinsiemi di [ a,b,c ] di cardinalità 2. */
@@ -29,7 +29,7 @@ X = b,
 Y = c ;
 false.
 ```
-Ricercare tutti i possibili soprainsiemi di un insieme :
++ Ricercare tutti i possibili soprainsiemi di un insieme :
 
 ```prolog
 ?- binomial( X, [ a,b,c ] ).
@@ -43,7 +43,7 @@ X = [a, b, c, _4378, _4384, _4390, _4396, _4402, _4408]
 ...
 ```
 Ovviamente i risultati non avranno fine.
-Come conseguenza dei precedenti predicati, è anche possibile utilizzare lo stesso predicato con il solo scopo di verificare che un insieme `A` sia sottoinsieme di un certo insieme `B` ( relazione di inclusione ). E' sufficiente scrivere la query nel seguente modo :
++ Come conseguenza dei precedenti predicati, è anche possibile utilizzare lo stesso predicato con il solo scopo di verificare che un insieme `A` sia sottoinsieme di un certo insieme `B` ( relazione di inclusione ). E' sufficiente scrivere la query nel seguente modo :
 
 ```prolog
 ?- binomial( [ a,b,c ], [ a,b ] ), !. /* il predicato verifica se [ a,b ] è incluso in [ a,b,c ] */
@@ -57,7 +57,7 @@ false.
 
 Il predicato ```permutation/2``` consente di ricercare ogni raggruppamento di oggetti, la cui cardinalità non supera il numero di tali oggetti. Per ogni sottoinsieme ordinato di ```k``` elementi estratti da un insieme di ```n``` elementi, i vari sottoinsiemi possono differire almeno in un elemento oppure, in presenza degli stessi elementi, nel modo in cui sono ordinati. Anche questo predicato è multidirezionale, quindi può essere utilizzato per vari scopi :
 
-Ricercare tutti i possibili raggruppamenti di ```n``` oggetti di cardinalità non superiore a ```n``` :
++ Ricercare tutti i possibili raggruppamenti di ```n``` oggetti di cardinalità non superiore a ```n``` :
 
 ```prolog
 ?- permutation( [ a,b,c ], X ).
@@ -79,7 +79,7 @@ X = [c, b] ;
 X = [c, b, a] ;
 false.
 ```
-Ricercare ogni possibile insieme partendo da un raggruppamento di `n` oggetti dato in input :
++ Ricercare ogni possibile insieme partendo da un raggruppamento di `n` oggetti dato in input :
 
 ```prolog
 ?- permutation( [ X,Y ], [ a,b ] ).
@@ -93,7 +93,7 @@ false.
 false.
 ```
 
-Ricercare tutti i possibili raggruppamenti di ```n``` oggetti di cardinalità ```k``` :
++ Ricercare tutti i possibili raggruppamenti di ```n``` oggetti di cardinalità ```k``` :
 
 ```prolog
 ?- permutation( [ a,b ], [ X ] ). /* il predicato ricerca i raggruppamenti di cardinalità 1. */
@@ -109,7 +109,8 @@ Y = a ;
 false.
 ```
 
-Nel secondo caso, il predicato ha ricercato dei particolari raggruppamenti chiamati con il nome di **permutazioni**. Inoltre, Come per il primo predicato, anche questo secondo, è in grado di verificare se un raggruppamento è una possibile disposizione di elementi generata dall'insieme di partenza. Basta scrivere la query in questo modo :
+Nel secondo caso, il predicato ha ricercato dei particolari raggruppamenti chiamati con il nome di **permutazioni**. 
++ Inoltre, Come per il primo predicato, anche questo secondo, è in grado di verificare se un raggruppamento è una possibile disposizione di elementi generata dall'insieme di partenza. Basta scrivere la query in questo modo :
 
 ```prolog
 ?- permutation( [ a,b,c ], [ a,b ] ), !.
