@@ -174,7 +174,7 @@ Y = 0,
 Z = 1 ;
 false.
 ```
-+ Ricercare ogni disposizione di n oggetti di qualsiasi cardinalità :
++ Ricercare ogni disposizione di `n` oggetti di qualsiasi cardinalità :
 
 ```prolog
 ?- combination( [ 0,1 ], X ).
