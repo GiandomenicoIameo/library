@@ -144,7 +144,7 @@ Il predicato ha considerato l'insieme `[a, b, c, a, c]` prefettamente equivalent
 Il predicato `combination/2` consente di ricercare il numero di disposizioni con ripetizione di `n` elementi a `k` a `k`. A differenza delle disposizioni semplici, generate dal predicato `permutation/2`, non vale il vincolo `k` minore o uguale a `n`: poiché ogni volta è possibile estrarre dall'insieme qualsiasi elemento senza correre il rischio di catturare duplicati. Inoltre, non esiste pericolo alcuno che questi elementi si esauriscono come capita invece nelle disposizioni semplici in cui, dopo `n` estrazioni, non rimangono nell'insieme più elementi da poter estrarre.
 Come per i precedenti predicati, anche questo è multidirezionale. I prossimi esempi mostreranno in che modo potrà essere utilizzato :
 
-Ricercare il numero di disposizioni con ripetizione di cardinalità `k` :
++ Ricercare il numero di disposizioni con ripetizione di cardinalità `k` :
 
 ```prolog
 ?- combination( [ 0,1 ], [ X,Y ] ). /* il predicato ricerca le disposizoni di cardinalità 2. */
@@ -157,7 +157,7 @@ X = Y, Y = 1 ;
 false.
 ```
 
-Ricercare ogni possibile insieme partendo da una disposizione di `n` oggetti dato in input :
++ Ricercare ogni possibile insieme partendo da una disposizione di `n` oggetti dato in input :
 
 ```prolog
 ?- combination( [ X,Y,Z ], [ 0,1 ] ).
