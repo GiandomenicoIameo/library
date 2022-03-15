@@ -1,6 +1,4 @@
 # Combinatory logic
-===
-
 
 ## ```binomial/2```:
 
