@@ -1,7 +1,7 @@
 Combinatory logic
 ===
 
-![prolog](https://aws1.discourse-cdn.com/free1/uploads/swiprolog/original/1X/73ebf150a3746e8f54f93423fb28d18c434847c9.png)
+![prolog](https://miro.medium.com/max/1400/1*dq-fLAE7NX_5XUF2bsQjYA.png)
 
 ***
 
