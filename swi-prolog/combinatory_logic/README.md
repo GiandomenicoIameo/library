@@ -1,7 +1,7 @@
 Combinatory logic
 ===
 
-[![npm text][npm-text]][npm]
+[Versions](#versions)
 
 ```binomial/2```:
 ---
