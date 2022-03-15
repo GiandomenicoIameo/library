@@ -1,6 +1,8 @@
 Combinatory logic
 ===
 
+<font color="red">Testo in rosso</font>
+
 ***
 
 ```binomial/2```:
