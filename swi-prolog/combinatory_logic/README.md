@@ -77,7 +77,8 @@ X = [c, b] ;
 X = [c] ;
 X = [].
 ```
-+ Ricercare ogni possibile insieme partendo da un raggruppamento di `n` oggetti dato in input :
+
++ Ricercare ogni insieme in grado di generare il raggruppamento dato in input : 
 
 ```prolog
 ?- generate_permutation( X, [ a,b ] ).
@@ -88,7 +89,11 @@ X = [a, b, _4002, _4008, _4014] ;
 X = [a, b, _4002, _4008, _4014, _4020] ;
 X = [a, b, _4002, _4008, _4014, _4020, _4026] .
 ...
+```
 
++ Ricercare ogni possibile insieme partendo da un raggruppamento di `n` oggetti dato in input :
+
+```prolog
 ?- generate_permutation( [ X,Y ], [ a,b ] ).
 X = a,
 Y = b ;
