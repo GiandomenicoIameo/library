@@ -2,15 +2,8 @@
 
 ## ```binomial/2```:
 
-## This is my-card
-
-Here's an example of the component:
-
-```html preview-story
-<my-card>
-  <h2>Hello world!</h2>
-  <button>Click me!</button>
-</my-card>
+```js script
+// execute me
 ```
 
 
