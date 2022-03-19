@@ -2,9 +2,17 @@
 
 ## ```binomial/2```:
 
+## This is my-card
+
+Here's an example of the component:
+
 ```html preview-story
-<demo-wc-card>HTML Preview Story</demo-wc-card>
+<my-card>
+  <h2>Hello world!</h2>
+  <button>Click me!</button>
+</my-card>
 ```
+
 
 
 Il predicato ```binomial/2``` consente di ricercare il numero dei sottoinsiemi, di un particolare insieme, aventi cardinalità non superiore all’insieme di partenza. Oltre a ciò, come accade spesso nel linguaggio Prolog, il suddetto predicato è anche bidirezionale, quindi può essere utilizzato per vari scopi :
