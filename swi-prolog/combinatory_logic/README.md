@@ -2,6 +2,8 @@
 
 ## ```binomial/2```:
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+
 Il predicato ```binomial/2``` consente di ricercare il numero dei sottoinsiemi, di un particolare insieme, aventi cardinalità non superiore all’insieme di partenza. Oltre a ciò, come accade spesso nel linguaggio Prolog, il suddetto predicato è anche bidirezionale, quindi può essere utilizzato per vari scopi :
 
 + Ricercare tutti i possibili sottoinsiemi di un insieme di partenza ( insieme delle parti ) :
