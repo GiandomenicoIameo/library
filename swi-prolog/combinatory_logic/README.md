@@ -3,7 +3,14 @@
 ## ```binomial/2```:
 
 ```js script
-// execute me
+const katex = require( 'katex' );
+const html = katex.renderToString( "a = \\sqrt{ x^5 + y^8 }" );
+
+function succ( a ) {
+  return a + 1;
+}
+
+console.log( succ( 5 ) );
 ```
 
 
