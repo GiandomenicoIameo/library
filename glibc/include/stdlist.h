@@ -3,9 +3,8 @@
  *
  *    This library is distributed in the hope that it will be useful,
  *    but WITHOUT ANY WARRANTY. For more details consult the code.
- *
  *    This library is free software; you can redistribute it and/or
- *    modify. ISO C99 Standard: 1.0 singly-list      <stdlist.h>
+ *    modify.
  *
  *    This file define one type of data structure: singly-linked list.
  *    A singly-linked list is headed by a single forward pointer. The
