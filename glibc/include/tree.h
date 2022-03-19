@@ -2,7 +2,7 @@
    but WITHOUT ANY WARRANTY. For more details consult the code.
 
    This library is free software; you can redistribute it and/or
-   modify. ISO C99 Standard: 1.0 Bstree      <bstree.h>
+   modify.
 */
 
 #ifndef _TREE_H
