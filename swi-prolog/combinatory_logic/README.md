@@ -52,55 +52,63 @@ true.
 false.
 ```
 
-## ```permutation/2```:
+## ```generate_permutation/2```:
 
-Il predicato ```permutation/2``` consente di ricercare ogni raggruppamento di oggetti, la cui cardinalità non supera il numero di tali oggetti. Per ogni sottoinsieme ordinato di ```k``` elementi estratti da un insieme di ```n``` elementi, i vari sottoinsiemi possono differire almeno in un elemento oppure, in presenza degli stessi elementi, nel modo in cui sono ordinati. Anche questo predicato è multidirezionale, quindi può essere utilizzato per vari scopi :
+Il predicato ```generate_permutation/2``` consente di ricercare ogni raggruppamento di oggetti, la cui cardinalità non supera il numero di tali oggetti. Per ogni sottoinsieme ordinato di ```k``` elementi estratti da un insieme di ```n``` elementi, i vari sottoinsiemi possono differire almeno in un elemento oppure, in presenza degli stessi elementi, nel modo in cui sono ordinati. Anche questo predicato è multidirezionale, quindi può essere utilizzato per vari scopi :
 
 + Ricercare tutti i possibili raggruppamenti di ```n``` oggetti di cardinalità non superiore a ```n``` :
 
 ```prolog
-?- permutation( [ a,b,c ], X ).
-X = [] ;
-X = [a] ;
-X = [a, b] ;
+?- generate_permutation( [ a,b,c ], X ).
 X = [a, b, c] ;
-X = [a, c] ;
+X = [a, b] ;
 X = [a, c, b] ;
-X = [b] ;
-X = [b, a] ;
+X = [a, c] ;
+X = [a] ;
 X = [b, a, c] ;
-X = [b, c] ;
+X = [b, a] ;
 X = [b, c, a] ;
-X = [c] ;
-X = [c, a] ;
+X = [b, c] ;
+X = [b] ;
 X = [c, a, b] ;
-X = [c, b] ;
+X = [c, a] ;
 X = [c, b, a] ;
-false.
+X = [c, b] ;
+X = [c] ;
+X = [].
 ```
 + Ricercare ogni possibile insieme partendo da un raggruppamento di `n` oggetti dato in input :
 
 ```prolog
-?- permutation( [ X,Y ], [ a,b ] ).
+?- generate_permutation( X, [ a,b ] ).
+X = [a, b] ;
+X = [a, b, _4002] ;
+X = [a, b, _4002, _4008] ;
+X = [a, b, _4002, _4008, _4014] ;
+X = [a, b, _4002, _4008, _4014, _4020] ;
+X = [a, b, _4002, _4008, _4014, _4020, _4026] .
+...
+
+?- generate_permutation( [ X,Y ], [ a,b ] ).
 X = a,
 Y = b ;
 X = b,
 Y = a ;
 false.
 
-?- permutation( [ X ], [ a,b ] ).
+?- generate_permutation( [ X ], [ a,b ] ).
 false.
 ```
 
 + Ricercare tutti i possibili raggruppamenti di ```n``` oggetti di cardinalità ```k``` :
 
 ```prolog
-?- permutation( [ a,b ], [ X ] ). /* il predicato ricerca i raggruppamenti di cardinalità 1. */
+?- generate_permutation( [ a,b ], [ X ] ).
 X = a ;
 X = b ;
 false.
 
-?- permutation( [ a,b ], [ X,Y ] ). /* il predicato ricerca i raggruppamenti di cardinalità 2. */
+?- generate_permutation( [ a,b ], [ X,Y ] ).
 X = a,
 Y = b ;
 X = b,
@@ -111,10 +119,10 @@ false.
 Nel secondo caso, il predicato ha ricercato dei particolari raggruppamenti chiamati con il nome di **permutazioni**. Inoltre, Come per il primo predicato, anche questo secondo, è in grado di verificare se un raggruppamento è una possibile disposizione di elementi generata dall'insieme di partenza. Basta scrivere la query in questo modo :
 
 ```prolog
-?- permutation( [ a,b,c ], [ a,b ] ), !.
+?- generate_permutation( [ a,b,c ], [ a,b ] ), !.
 true.
 
-?- permutation( [ a,b,c ], [ a,d ] ), !.
+?- generate_permutation( [ a,b,c ], [ a,d ] ), !.
 false.
 ```
 ## Avvertenze:
