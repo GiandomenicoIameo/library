@@ -8,9 +8,10 @@ binomial( [], [] ).
 binomial( [ X|Xs ], [ X|Ys ] ) :- binomial( Xs, Ys ).
 binomial( [ _|Xs ], Ys ) :- binomial( Xs, Ys ).
 
-permutation( _, [] ).
-permutation( Ys, [ X|Xs ] ) :- delete( X, Ys, Zs ),
-permutation( Zs, Xs ).
+permutation( [], _, [] ).
+permutation( [ X|_ ], Acc, [ X|Ys ] ) :- delete( X, Acc, Zs ),
+permutation( Zs, Zs, Ys ).
+permutation( [ _|Xs ], Acc, Ys ) :- permutation( Xs, Acc, Ys ).
 
 combination( _, [] ).
 combination( Ys, [ X|Xs ] ) :-
