@@ -113,15 +113,14 @@ X = a ;
 X = b ;
 false.
 
-?- generate_permutation( [ a,b ], [ X,Y ] ).
+?- generate_permutation( [ a,b ], [ X,Y ] ). /* biiezioni da [ a,b ] in [ a,b ] */
 X = a,
 Y = b ;
 X = b,
 Y = a ;
 false.
 ```
-
-Nel secondo caso, il predicato ha ricercato dei particolari raggruppamenti che rappresentano delle biiezioni da `[ a,b ]` in `[ a,b ]` chiamate anche **permutazioni** di `[ a,b ]`. Inoltre, Come per il primo predicato, anche questo secondo, è in grado di verificare se un raggruppamento è una possibile disposizione di elementi generata dall'insieme di partenza. Basta scrivere la query in questo modo :
+Come ultimo caso, anche questo secondo predicato è in grado di verificare se un raggruppamento è una possibile disposizione di elementi generata dall'insieme di partenza. Basta scrivere la query in questo modo :
 
 ```prolog
 ?- generate_permutation( [ a,b,c ], [ a,b ] ), !.
