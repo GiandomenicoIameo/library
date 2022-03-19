@@ -32,11 +32,20 @@ struct equeue {
     struct elem *end;
 };
 
-
+/* node allocation functions */
 struct elem *allocate( int key );
 struct equeue *init( void );
+int isempty( void *list );
+
+/* Standard stack operations */
 struct elem *pop( struct elem *top );
 struct elem *push( struct elem *top, struct elem *node );
+
+/* Standard queue operations */
+struct equeue *enqueue( struct equeue *queue, struct elem *node );
+struct equeue *dequeue( struct equeue *queue );
+
+
 struct elem *append( struct elem *top, struct elem *node );
 unsigned int len( struct elem *top );
 struct elem *inorder( struct elem *top, struct elem *node );
@@ -49,10 +58,6 @@ struct elem *min( struct elem *top );
 struct elem *reverse( struct elem *succ, struct elem *prec );
 struct elem *concatenate( struct elem *top1, struct elem *top2 );
 struct elem *merge( struct elem *top1, struct elem *top2 );
-int isempty( void *list );
 static struct elem *add( struct elem *end, struct elem *node );
-struct equeue *enqueue( struct equeue *queue, struct elem *node );
-struct equeue *dequeue( struct equeue *queue );
-
 
 #endif
