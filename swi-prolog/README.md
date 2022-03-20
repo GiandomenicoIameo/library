@@ -9,12 +9,12 @@
 # versione successiva, sarà possibile installare
 # snap direttamente dalla linea di comando :
 
-sudo apt update
-sudo apt install snapd
-sudo snap install core
+$ sudo apt update
+$ sudo apt install snapd
+$ sudo snap install core
 
 # installa swi-prolog
-sudo snap install swi-prolog
+$ sudo snap install swi-prolog
 ```
 
 # Esecuzione di programmi 
@@ -23,7 +23,7 @@ sudo snap install swi-prolog
 # Se l'installazione è avvenuta con successo non ci resta che avviare l'interprete
 # prolog, nel terminale, con il seguente comando:
 
-swipl 
+$ swipl 
 Welcome to SWI-Prolog (threaded, 64 bits, version 8.0.2)
 
 ?- 
