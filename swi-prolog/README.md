@@ -22,7 +22,7 @@ sudo snap install swi-prolog
 # Se l'installazione è avvenuta con successo non ci resta che avviare l'interprete
 # prolog:
 
-$ swipl 
+swipl 
 Welcome to SWI-Prolog (threaded, 64 bits, version 8.0.2)
 SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
 Please run ?- license. for legal details.
