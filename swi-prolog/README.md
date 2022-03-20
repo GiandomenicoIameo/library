@@ -3,9 +3,8 @@
 
 ```bash
 Linux ( Debian )
- 
-# Installazione Snapd
-#
+Installazione tramite Snapd
+
 # Snapd è la tecnologia che permette ai pacchetti 
 # Snap di essere eseguiti su Linux. Questi ultimi 
 # possono essere installati dallo snap store e contengono 
@@ -30,9 +29,8 @@ sudo snap install swi-prolog
 
 ```bash
 Linux ( Ubuntu )
-  
-# Installazione tramite PPA ( Ubuntu Personal Package Archive )
-#
+Installazione tramite PPA ( Ubuntu Personal Package Archive )
+
 # Esistono PPA per lo sviluppo e alcuni basati sulla struttura
 # di pacchettizzazione Debian. Indipendentemente dalla scelta,
 # questi vengono aggiornati ogni volta si presenta una nuova
