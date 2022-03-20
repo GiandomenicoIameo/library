@@ -31,7 +31,7 @@ sudo snap install swi-prolog
 # di pacchettizzazione Debian. Indipendentemente dalla scelta,
 # questi vengono aggiornati ogni volta si prresenta una nuova
 # versione.
-#
+
 # Versioni stabili
 
 sudo apt-add-repository ppa:swi-prolog/stable
