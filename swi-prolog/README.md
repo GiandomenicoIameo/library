@@ -1,7 +1,7 @@
 
 # Installazione di *SWI-Prolog*
 
-![red](https://via.placeholder.com/15/f03c15/000000?text=+) `#f03c15`
+![red](https://via.placeholder.com/15/f03c15/000000?text=+)
 
 ```bash
 # Linux ( Debian )
