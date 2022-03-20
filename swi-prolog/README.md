@@ -2,8 +2,9 @@
 # Installazione di *SWI-Prolog*
 
 ```bash
-# Abilita snapd
+# Linux ( Debian )
 #
+# Abilita snapd :
 # A partire da Debian 9 ( Stretch ), e in ogni 
 # versione successiva, sarà possibile installare
 # snap direttamente dalla linea di comando :
