@@ -49,8 +49,8 @@ sudo apt install swi-prolog
 # Esecuzione di programmi 
 
 ```bash
-# Se l'installazione è avvenuta con successo non ci resta che avviare l'interprete
-# prolog, nel terminale, con il seguente comando:
+# Una volta installato il pacchetto swi-prolog non ci resta 
+# che avviare l'interprete prolog, nel terminale, con il seguente comando:
 
 swipl 
 Welcome to SWI-Prolog (threaded, 64 bits, version 8.0.2)
