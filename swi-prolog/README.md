@@ -24,6 +24,7 @@ sudo snap install swi-prolog
 
 swipl 
 Welcome to SWI-Prolog (threaded, 64 bits, version 8.0.2)
+
 ?- 
 ```
 
