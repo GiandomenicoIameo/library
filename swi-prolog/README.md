@@ -1,5 +1,5 @@
 
-# Installazione di SWI-Prolog
+# Installazione di **swi-prolog**
 
 ```bash
 # Abilita snapd
