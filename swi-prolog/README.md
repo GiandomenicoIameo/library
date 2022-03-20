@@ -2,7 +2,8 @@
 # Installazione di *SWI-Prolog*
 
 ```bash
-Linux ( Debian )
+  Linux ( Debian )
+ 
 # Installazione Snapd
 #
 # Snapd è la tecnologia che permette ai pacchetti 
@@ -28,7 +29,8 @@ sudo snap install swi-prolog
 ```
 
 ```bash
-Linux ( Ubuntu )
+  Linux ( Ubuntu )
+  
 # Installazione tramite PPA ( Ubuntu Personal Package Archive )
 #
 # Esistono PPA per lo sviluppo e alcuni basati sulla struttura
