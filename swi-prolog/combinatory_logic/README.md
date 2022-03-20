@@ -190,18 +190,37 @@ X = [b, b] ;
 ...
 ```
 
-# Installazione di SWI-Prolog:
+# Installazione di SWI-Prolog
 
 ```bash
-# Enable snapd : 
+# Abilita snapd : 
 
-# On Debian 9 ( Stretch ) and newer, 
-# snap can be installed directly from the command line:
+# A partire da Debian 9 ( Stretch ), e in tutte le sue versioni successive,  
+# sarà possibile installare snap direttamente dalla linea di comando:
 
 sudo apt update
 sudo apt install snapd
 sudo snap install core
 
-# install swi-prolog
+# installazione swi-prolog
 sudo snap install swi-prolog
+```
+
+# Esecuzione di programmi
+
+```bash
+# Per avviare swi-prolog ( l'interprete ) direttamente dalla linea
+# di comando, digitare il seguente comando
+
+$ swipl
+Welcome to SWI-Prolog (threaded, 64 bits, version 8.0.2)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit http://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+?- 
+
+# Una volta che l'interprete sarò avviato 
 ```
