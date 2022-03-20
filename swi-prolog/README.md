@@ -18,7 +18,7 @@ sudo snap install swi-prolog
 
 # Esecuzione di programmi 
 
-```
+```bash
 # Se l'installazione è avvenuta con successo non ci resta che avviare l'interprete
 # prolog:
 
