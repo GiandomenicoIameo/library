@@ -32,6 +32,7 @@ For built-in help, use ?- help(Topic). or ?- apropos(Word).
 
 ?- 
 ```
+
 ```prolog
 # Per caricare un programma sono disponibili 3 diversi comandi:
 
