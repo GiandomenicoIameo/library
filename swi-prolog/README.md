@@ -3,8 +3,10 @@
 
 ```bash
 # Linux ( Debian )
+
+
+# Installazione del gestore di pacchetti snapd :
 #
-# Abilita snapd :
 # A partire da Debian 9 ( Stretch ), e in ogni 
 # versione successiva, sarà possibile installare
 # snap direttamente dalla linea di comando :
