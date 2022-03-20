@@ -1,16 +1,7 @@
 
-# Installazione di *SWI-Prolog*
+# Installazione di *SWI-Prolog*`
 
-![red](https://via.placeholder.com/15/f03c15/000000?text=ok)
-
-```diff
-+ text in red
-text in green
-text in orange
-text in gray
-```
-
-```bash
+```bash diff
 # Linux ( Debian )
 #
 # Abilita snapd :
@@ -18,7 +9,7 @@ text in gray
 # versione successiva, sarà possibile installare
 # snap direttamente dalla linea di comando :
 
-sudo apt update
+- sudo apt update
 sudo apt install snapd
 sudo snap install core
 
