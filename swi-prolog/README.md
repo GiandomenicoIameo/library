@@ -15,3 +15,27 @@ sudo snap install core
 # installa swi-prolog
 sudo snap install swi-prolog
 ```
+
+# Esecuzione di programmi 
+
+```
+# Se l'installazione è avvenuta con successo non ci resta che avviare l'interprete
+# prolog, quindi:
+
+$ swipl 
+Welcome to SWI-Prolog (threaded, 64 bits, version 8.0.2)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit http://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+?- 
+
+# Per caricare un programma sono disponibili 3 diversi comandi:
+
+?- [ 'program.pl' ].
+?- consult( 'program.pl' ).
+?- reconsult( 'program.pl' ).
+```
+
