@@ -3,6 +3,13 @@
 
 ![red](https://via.placeholder.com/15/f03c15/000000?text=ok)
 
+```diff
+- text in red
++ text in green
+! text in orange
+# text in gray
+```
+
 ```bash
 # Linux ( Debian )
 #
