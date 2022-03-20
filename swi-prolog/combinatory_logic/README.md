@@ -190,3 +190,18 @@ X = [b, b] ;
 ...
 ```
 
+# Installazione di SWI-Prolog:
+
+```bash
+# Enable snapd : 
+
+# On Debian 9 ( Stretch ) and newer, 
+# snap can be installed directly from the command line:
+
+sudo apt update
+sudo apt install snapd
+sudo snap install core
+
+# install swi-prolog
+sudo snap install swi-prolog
+```
