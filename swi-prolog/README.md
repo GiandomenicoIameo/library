@@ -35,7 +35,7 @@ For built-in help, use ?- help(Topic). or ?- apropos(Word).
 # Per caricare un programma sono disponibili 3 diversi comandi:
 
 ?- [ 'program.pl' ].                # oppure
-?- consult( 'program.pl' ).         # viene utilizzato quando si carica un programma la prima volta
+?- consult( 'program.pl' ).         # viene utilizzato quando si carica un programma per la prima volta
 ?- reconsult( 'program.pl' ).       # viene utilizzato quando si carica un programma dopo una correzione
 ```
 
