@@ -1,7 +1,7 @@
 
 # Installazione di *SWI-Prolog*`
 
-```bash diff
+```bash, diff
 # Linux ( Debian )
 #
 # Abilita snapd :
