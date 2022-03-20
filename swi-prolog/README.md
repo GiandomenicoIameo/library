@@ -20,7 +20,7 @@ sudo snap install swi-prolog
 
 ```bash
 # Se l'installazione è avvenuta con successo non ci resta che avviare l'interprete
-# prolog:
+# prolog, nel terminale, con il seguente comando:
 
 swipl 
 Welcome to SWI-Prolog (threaded, 64 bits, version 8.0.2)
