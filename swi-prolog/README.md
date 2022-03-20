@@ -6,8 +6,9 @@
 #
 # Prima di avviare la vera e propria installazione
 # del pacchetto swi-prolog, è consigliabile installarlo 
-# tramite il gestore di pacchetti Snappy. Quindi non ci 
-# resta che avviare questa installazione.
+# tramite il gestore di pacchetti Snappy. Ma prima dobbiamo
+# essere sicuri che questo gestore sia incluso nel 
+# nostro sistema, altrimenti è possibile installarlo.
 #
 # A partire da Debian 9 ( Stretch ), e in ogni 
 # versione successiva, sarà possibile installare
