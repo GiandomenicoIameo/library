@@ -1,5 +1,5 @@
 
-# Installazione di *SWI-Prolog*`
+# Installazione di *SWI-Prolog*
 
 ```bash
 # Linux ( Debian )
