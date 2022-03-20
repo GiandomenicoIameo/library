@@ -15,7 +15,9 @@
 # A partire da Debian 9 ( Stretch ), 
 # e in ogni versione successiva, sarà possibile installare
 # snap direttamente dalla linea di comando :
+```
 
+```bash
 sudo apt update
 sudo apt install snapd
 sudo snap install core
@@ -23,7 +25,9 @@ sudo snap install core
 # installa swi-prolog
 
 sudo snap install swi-prolog
+```
 
+```bash
 # Linux ( Ubuntu )
 # Installazione tramite PPA ( Ubuntu Personal Package Archive )
 #
@@ -31,7 +35,9 @@ sudo snap install swi-prolog
 # di pacchettizzazione Debian. Indipendentemente dalla scelta,
 # questi vengono aggiornati ogni volta si presenta una nuova
 # versione.
+```
 
+```bash
 # Versioni stabili
 
 sudo apt-add-repository ppa:swi-prolog/stable
@@ -43,7 +49,6 @@ sudo apt install swi-prolog
 sudo apt-add-repository ppa:swi-prolog/devel
 sudo apt update
 sudo apt install swi-prolog
-
 ```
 
 # Esecuzione di programmi 
