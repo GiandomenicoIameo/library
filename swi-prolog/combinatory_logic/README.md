@@ -154,40 +154,39 @@ Come per i precedenti predicati, anche questo è multidirezionale. I prossimi es
 + Ricercare il numero di disposizioni con ripetizione di cardinalità `k` :
 
 ```prolog
-?- combination( [ 0,1 ], [ X,Y ] ). /* il predicato ricerca le disposizoni di cardinalità 2. */
-X = Y, Y = 0 ;
-X = 1,
-Y = 0 ;
-X = 0,
-Y = 1 ;
-X = Y, Y = 1 ;
+?- combination( [ a,b ], [ X,Y ] ).
+X = Y, Y = a ;
+X = b,
+Y = a ;
+X = a,
+Y = b ;
+X = Y, Y = b ;
 false.
 ```
 
 + Ricercare ogni possibile insieme partendo da una disposizione di `n` oggetti dato in input :
 
 ```prolog
-?- combination( [ X,Y ], [ 0,1 ] ).
-X = 1,
-Y = 0 ;
-X = 0,
-Y = 1 ;
+?- combination( [ X,Y ], [ a,b ] ).
+X = b,
+Y = a ;
+X = a,
+Y = b ;
 false.
 ```
 + Ricercare ogni disposizione di `n` oggetti di qualsiasi cardinalità :
 
 ```prolog
-?- combination( [ 0,1 ], X ).
+?- combination( [ a,b,c ], X ).
 X = [] ;
-X = [0] ;
-X = [1] ;
-X = [0, 0] ;
-X = [1, 0] ;
-X = [0, 1] ;
-X = [1, 1] ;
-X = [0, 0, 0] ;
-X = [1, 0, 0] ;
-X = [0, 1, 0] ;
+X = [a] ;
+X = [b] ;
+X = [c] ;
+X = [a, a] ;
+X = [b, a] ;
+X = [c, a] ;
+X = [a, b] ;
+X = [b, b] ;
 ...
 ```
 
