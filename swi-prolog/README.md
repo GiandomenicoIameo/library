@@ -3,8 +3,7 @@
 
 ```bash
 # Linux ( Debian )
-#
-# Installare Snapd
+# Installazione Snapd
 #
 # Snapd è la tecnologia che permette ai pacchetti 
 # Snap di essere eseguiti su Linux. Questi ultimi 
@@ -24,6 +23,27 @@ sudo snap install core
 # installa swi-prolog
 
 sudo snap install swi-prolog
+
+# Linux ( Ubuntu )
+# Installazione tramite PPA ( Ubuntu Personal Package Archive )
+#
+# Esistono PPA per lo sviluppo e alcuni basati sulla struttura
+# di pacchettizzazione Debian. Indipendentemente dalla scelta,
+# questi vengono aggiornati ogni volta si prresenta una nuova
+# versione.
+#
+# Versioni stabili
+#
+# sudo apt-add-repository ppa:swi-prolog/stable
+# sudo apt update
+# sudo apt install swi-prolog
+#
+# Versioni di sviluppo
+#
+# sudo apt-add-repository ppa:swi-prolog/devel
+# sudo apt update
+# sudo apt install swi-prolog
+
 ```
 
 # Esecuzione di programmi 
