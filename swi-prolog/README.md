@@ -1,5 +1,6 @@
 
 # Installazione di *SWI-Prolog*`
+![Red text](http://placehold.it/size/background-hex/foreground-hex?text=a123)
 
 ```diff
 # Linux ( Debian )
@@ -9,7 +10,7 @@
 # versione successiva, sarà possibile installare
 # snap direttamente dalla linea di comando :
 
-@@ - sudo apt update @@
+@@ sudo apt update @@
 sudo apt install snapd
 sudo snap install core
 
