@@ -20,7 +20,7 @@ sudo snap install swi-prolog
 
 ```
 # Se l'installazione è avvenuta con successo non ci resta che avviare l'interprete
-# prolog, quindi:
+# prolog:
 
 $ swipl 
 Welcome to SWI-Prolog (threaded, 64 bits, version 8.0.2)
@@ -34,8 +34,8 @@ For built-in help, use ?- help(Topic). or ?- apropos(Word).
 
 # Per caricare un programma sono disponibili 3 diversi comandi:
 
-?- [ 'program.pl' ].
-?- consult( 'program.pl' ).
-?- reconsult( 'program.pl' ).
+?- [ 'program.pl' ].                # oppure
+?- consult( 'program.pl' ).         # viene utilizzato quando si carica un programma la prima volta
+?- reconsult( 'program.pl' ).       # viene utilizzato quando si carica un programma dopo una correzione
 ```
 
