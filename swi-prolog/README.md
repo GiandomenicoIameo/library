@@ -1,6 +1,7 @@
 
 # Installazione di *SWI-Prolog*`
 
+!RED[ ciao ]
 
 ```diff
 # Linux ( Debian )
