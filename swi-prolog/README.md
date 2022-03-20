@@ -28,7 +28,7 @@ Welcome to SWI-Prolog (threaded, 64 bits, version 8.0.2)
 ?- 
 ```
 
-```prolog
+```bash
 # Per caricare un programma sono disponibili 3 diversi comandi:
 
 ?- [ 'program.pl' ].                # oppure
