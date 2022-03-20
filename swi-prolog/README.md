@@ -7,10 +7,10 @@
 # Installare Snapd
 #
 # Snapd è la tecnologia che permette ai pacchetti 
-# Snap di essere eseguiti su Linux.Questi ultimi 
+# Snap di essere eseguiti su Linux. Questi ultimi 
 # possono essere installati dallo snap store e contengono 
 # al loro interno tutto ciò che il programma ha bisogno per 
-# essere eseguito correttamente come ad esempio file audio, 
+# essere avviato correttamente come ad esempio file audio, 
 # librerie, file binari e così via. 
 #
 # A partire da Debian 9 ( Stretch ), 
