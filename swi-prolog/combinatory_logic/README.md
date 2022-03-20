@@ -3,11 +3,11 @@
 ## ```binomial/2```:
 
 ```prolog
-Il predicato binomial/2 consente di ricercare il numero dei sottoinsiemi, di un particolare insieme, 
-aventi cardinalità non superiore all’insieme di partenza. Oltre a ciò, come accade spesso nel linguaggio 
-Prolog, il suddetto predicato è anche bidirezionale, quindi può essere utilizzato per vari scopi :
+# Il predicato binomial/2 consente di ricercare il numero dei sottoinsiemi, di un particolare insieme, 
+# aventi cardinalità non superiore all’insieme di partenza. Oltre a ciò, come accade spesso nel linguaggio 
+# Prolog, il suddetto predicato è anche bidirezionale, quindi può essere utilizzato per vari scopi :
 
-Ricercare tutti i possibili sottoinsiemi di un insieme di partenza ( insieme delle parti ) :
+# Ricercare tutti i possibili sottoinsiemi di un insieme di partenza ( insieme delle parti ) :
 
 ?- binomial( [ a,b,c ], X ).
 X = [a, b, c] ;
