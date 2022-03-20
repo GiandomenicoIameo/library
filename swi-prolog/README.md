@@ -33,16 +33,16 @@ sudo snap install swi-prolog
 # versione.
 #
 # Versioni stabili
-#
-# sudo apt-add-repository ppa:swi-prolog/stable
-# sudo apt update
-# sudo apt install swi-prolog
-#
+
+sudo apt-add-repository ppa:swi-prolog/stable
+sudo apt update
+sudo apt install swi-prolog
+
 # Versioni di sviluppo
-#
-# sudo apt-add-repository ppa:swi-prolog/devel
-# sudo apt update
-# sudo apt install swi-prolog
+
+sudo apt-add-repository ppa:swi-prolog/devel
+sudo apt update
+sudo apt install swi-prolog
 
 ```
 
