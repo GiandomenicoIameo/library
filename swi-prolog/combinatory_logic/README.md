@@ -192,7 +192,7 @@ X = [b, b] ;
 
 # Installazione di SWI-Prolog:
 
-```bash
+```shell
 # Enable snapd : 
 
 # On Debian 9 ( Stretch ) and newer, 
