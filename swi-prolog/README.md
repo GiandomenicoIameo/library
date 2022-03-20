@@ -4,7 +4,7 @@
 ```bash
 # Linux ( Debian )
 #
-# Prima di avviare la vera e proprio installazione
+# Prima di avviare la vera e propria installazione
 # del pacchetto swi-prolog, è consigliabile installarlo 
 # tramite il gestore di pacchetti Snappy. Quindi non ci 
 # resta che avviare questa installazione.
