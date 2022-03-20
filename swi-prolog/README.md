@@ -5,7 +5,7 @@
 # Linux ( Debian )
 
 
-# Installazione del gestore di pacchetti + snapd + :
+# Installazione del gestore di pacchetti ++ snapd ++ :
 #
 # A partire da Debian 9 ( Stretch ), e in ogni 
 # versione successiva, sarà possibile installare
