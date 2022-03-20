@@ -33,7 +33,7 @@ Installazione tramite PPA ( Ubuntu Personal Package Archive )
 
 # Esistono PPA per lo sviluppo e alcuni basati sulla struttura
 # di pacchettizzazione Debian. Indipendentemente dalla scelta,
-# questi vengono aggiornati ogni volta si presenta una nuova
+# questi vengono aggiornati ogni volta che si presenta una nuova
 # versione.
 ```
 
