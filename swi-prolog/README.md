@@ -4,8 +4,10 @@
 ```bash
 # Linux ( Debian )
 #
-#
-# Installazione del gestore di pacchetti snapd :
+# Prima di avviare la vera e proprio installazione
+# del pacchetto swi-prolog, è consigliabile installarlo 
+# tramite il gestore di pacchetti Snappy. Quindi non ci 
+# resta che avviare questa installazione.
 #
 # A partire da Debian 9 ( Stretch ), e in ogni 
 # versione successiva, sarà possibile installare
@@ -16,6 +18,7 @@ sudo apt install snapd
 sudo snap install core
 
 # installa swi-prolog
+
 sudo snap install swi-prolog
 ```
 
