@@ -18,7 +18,7 @@ sudo snap install swi-prolog
 
 # Esecuzione di programmi 
 
-```sh
+```
 # Se l'installazione è avvenuta con successo non ci resta che avviare l'interprete
 # prolog:
 
@@ -31,7 +31,8 @@ For online help and background, visit http://www.swi-prolog.org
 For built-in help, use ?- help(Topic). or ?- apropos(Word).
 
 ?- 
-
+```
+```prolog
 # Per caricare un programma sono disponibili 3 diversi comandi:
 
 ?- [ 'program.pl' ].                # oppure
