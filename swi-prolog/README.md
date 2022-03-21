@@ -51,6 +51,18 @@ sudo apt update
 sudo apt install swi-prolog
 ```
 
+# Clonare la repository
+
+```bash
+# Una volta installato il pacchetto swi-prolog non ci resta 
+# che clonare sul nostro computer locale la libreria 
+# combinatory_logic. Per farlo saranno sufficienti i
+# seguenti comandi :
+
+git clone 
+
+```
+
 # Esecuzione di programmi 
 
 ```bash
