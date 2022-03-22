@@ -84,8 +84,8 @@ Welcome to SWI-Prolog (threaded, 64 bits, version 8.0.2)
 ```bash
 # Per caricare un programma sono disponibili 3 diversi comandi:
 
-?- [ 'program.pl' ].                # oppure
-?- consult( 'program.pl' ).         # viene utilizzato quando si carica un programma per la prima volta
-?- reconsult( 'program.pl' ).       # viene utilizzato quando si carica un programma dopo una correzione
+?- [ 'dictionary.pro' ].                # oppure
+?- consult( 'dictionary.pro' ).         # viene utilizzato quando si carica un programma per la prima volta
+?- reconsult( 'dictonary.pro' ).       # viene utilizzato quando si carica un programma dopo una correzione
 ```
 
