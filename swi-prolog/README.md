@@ -66,6 +66,7 @@ git clone https://github.com/GiandomenicoIameo/library.git
 
 mkdir combinatory_logic
 cd combinatory_logic/
+
 wget https://raw.githubusercontent.com/GiandomenicoIameo/library/main/swi-prolog/combinatory_logic/combinatorics.pro
 wget https://raw.githubusercontent.com/GiandomenicoIameo/library/main/swi-prolog/combinatory_logic/dictionary.pro
 
