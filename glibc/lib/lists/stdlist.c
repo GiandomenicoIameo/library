@@ -114,26 +114,26 @@ struct elem *address( struct elem *top, int key ) {
   return res;
 }
 
-struct elem *reverse1( struct elem *top ) {
+struct elem *reverse_1( struct elem *top ) {
 
   struct elem *res;
 
   if( !top ) {
           res = top;
   } else {
-          res = append( top, reverse1( top->next ) );
+          res = append( top, reverse_1( top->next ) );
   }
   return res;
 }
 
-struct elem *reverse2( struct elem *succ, struct elem *prec ) {
+struct elem *reverse_2( struct elem *succ, struct elem *const prec ) {
 
   struct elem *res;
 
   if( !succ ) {
           res = prec;
   } else {
-          res = reverse2( succ->next, succ );
+          res = reverse_2( succ->next, succ );
           succ->next = prec;
   }
   return res;
@@ -247,17 +247,17 @@ int isempty( void *list ) {
   return 0;
 }
 
-struct equeue *init( void ) {
+struct queue *init( void ) {
 
-  struct equeue *queue;
+  struct queue *equeue;
 
-  queue = ( struct equeue* )malloc( sizeof( struct equeue ) );
-  if( !queue ) return queue;
+  equeue = ( struct queue* )malloc( sizeof( struct queue ) );
+  if( !equeue ) return equeue;
 
-  queue->top = NULL;
-  queue->end = NULL;
+  equeue->top = NULL;
+  equeue->end = NULL;
 
-  return queue;
+  return equeue;
 }
 
 static struct elem *add( struct elem *end, struct elem *const node ) {
@@ -273,31 +273,31 @@ static struct elem *add( struct elem *end, struct elem *const node ) {
   return res;
 }
 
-struct equeue *enqueue( struct equeue *queue, struct elem *const node ) {
+struct queue *enqueue( struct queue *equeue, struct elem *const node ) {
 
-  struct equeue *res;
+  struct queue *res;
 
-  if( !queue ) {
-          res = queue;
+  if( !equeue ) {
+          res = equeue;
   } else {
-          queue->end = add( queue->end, node );
+          equeue->end = add( equeue->end, node );
 
-          if( isempty( queue->top ) )
-                  queue->top = queue->end;
-          res = queue;
+          if( isempty( equeue->top ) )
+                  equeue->top = equeue->end;
+          res = equeue;
   }
   return res;
 }
 
-struct equeue *dequeue( struct equeue *queue ) {
+struct queue *dequeue( struct queue *equeue ) {
 
-  struct equeue *res;
+  struct queue *res;
 
-  if( !queue ) {
-          res = queue;
+  if( !equeue ) {
+          res = equeue;
   } else {
-          queue->top = pop( queue->top );
-          res = queue;
+          equeue->top = pop( equeue->top );
+          res = equeue;
   }
   return res;
 }
