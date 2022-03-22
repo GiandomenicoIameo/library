@@ -216,7 +216,7 @@ struct elem *split( struct elem *top, const int key ) {
                   res = top->next;
                   top->next = NULL;
           } else {
-                  return split( top->next, key );
+                  res = split( top->next, key );
           }
   }
   return res;
