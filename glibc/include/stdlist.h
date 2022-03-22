@@ -62,9 +62,8 @@ struct elem *min( struct elem *top );
 struct elem *clear( struct elem *top );
 struct elem *delete( struct elem *top, int key );
 
-/* Concatenation and splitting of lists */
+/* Concatenation operations */
 struct elem *concatenate( struct elem *top1, struct elem *top2 );
-struct elem *split( struct elem *top, const int key );
 struct elem *merge( struct elem *top1, struct elem *top2 );
 
 /* Other operations */
