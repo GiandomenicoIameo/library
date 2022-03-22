@@ -192,7 +192,6 @@ struct elem *min( struct elem *top ) {
   return res;
 }
 
-
 struct elem *concatenate( struct elem *top1, struct elem *top2 ) {
 
   struct elem *res;
@@ -202,6 +201,23 @@ struct elem *concatenate( struct elem *top1, struct elem *top2 ) {
   } else {
           top1->next = concatenate( top1->next, top2 );
           res = top1;
+  }
+  return res;
+}
+
+struct elem *split( struct elem *top, const int key ) {
+
+  struct elem *res;
+
+  if( !top ) {
+          res = top;
+  } else {
+          if( top->data == key ) {
+                  res = top->next;
+                  top->next = NULL;
+          } else {
+                  return split( top->next, key );
+          }
   }
   return res;
 }
@@ -240,9 +256,9 @@ struct elem *clear( struct elem *top ) {
   return res;
 }
 
-int isempty( void *list ) {
+int isempty( void *top ) {
 
-  if( !list )
+  if( !top )
        return 1;
   return 0;
 }
@@ -281,7 +297,6 @@ struct queue *enqueue( struct queue *equeue, struct elem *const node ) {
           res = equeue;
   } else {
           equeue->end = add( equeue->end, node );
-
           if( isempty( equeue->top ) )
                   equeue->top = equeue->end;
           res = equeue;
