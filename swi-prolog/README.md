@@ -55,7 +55,7 @@ sudo apt install swi-prolog
 
 ```bash
 # Una volta installato il pacchetto swi-prolog non ci resta 
-# che clonare i file sul nostro computer locale presenti nella
+# che clonare i file sul nostro computer locale, presenti nella
 # directory combinatory_logic. Detto ciò, cerchiamo di clonare 
 # solo i file strettamente necessari evitando così, di scaricare l'intera libreria. 
 # Per farlo saranno sufficienti i seguenti comandi :
