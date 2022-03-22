@@ -13,7 +13,7 @@ struct elem *allocate( int key ) {
   return node;
 }
 
-struct elem *push( struct elem *top, struct elem *node ) {
+struct elem *push( struct elem *top, struct elem *const node ) {
 
   if( !top ) {
           top = node;
@@ -24,7 +24,7 @@ struct elem *push( struct elem *top, struct elem *node ) {
   return top;
 }
 
-struct elem *append( struct elem *top, struct elem *node ) {
+struct elem *append( struct elem *top, struct elem *const node ) {
 
   struct elem *res;
 
@@ -50,7 +50,7 @@ unsigned int len( struct elem *top ) {
   return res;
 }
 
-struct elem *inorder( struct elem *top, struct elem *node ) {
+struct elem *inorder( struct elem *top, struct elem *const node ) {
 
   struct elem *res;
 
@@ -260,7 +260,7 @@ struct equeue *init( void ) {
   return queue;
 }
 
-static struct elem *add( struct elem *end, struct elem *node ) {
+static struct elem *add( struct elem *end, struct elem *const node ) {
 
   struct elem *res;
 
@@ -273,7 +273,7 @@ static struct elem *add( struct elem *end, struct elem *node ) {
   return res;
 }
 
-struct equeue *enqueue( struct equeue *queue, struct elem *node ) {
+struct equeue *enqueue( struct equeue *queue, struct elem *const node ) {
 
   struct equeue *res;
 
