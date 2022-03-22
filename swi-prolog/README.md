@@ -61,8 +61,7 @@ sudo apt install swi-prolog
 git clone https://github.com/GiandomenicoIameo/library.git
 
 # In modo alternativo, è possibile clonare solo i file strettamente 
-# necessari, ai fini del nostro scopo, evitando così di clonare l'intera
-# repository :
+# necessari, evitando così di clonare l'intera repository :
 
 mkdir combinatory_logic
 cd combinatory_logic/
