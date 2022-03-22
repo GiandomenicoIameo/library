@@ -68,8 +68,8 @@ wget https://raw.githubusercontent.com/GiandomenicoIameo/library/main/swi-prolog
 # Esecuzione di programmi 
 
 ```bash
-# Una volta installato il pacchetto swi-prolog non ci resta 
-# che avviare il suo interprete da riga di comando :
+# Arrivati a questo punto non ci resta 
+# che avviare l'interprete prolog da riga di comando :
 
 swipl 
 Welcome to SWI-Prolog (threaded, 64 bits, version 8.0.2)
