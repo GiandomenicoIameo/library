@@ -205,23 +205,6 @@ struct elem *concatenate( struct elem *top1, struct elem *top2 ) {
   return res;
 }
 
-struct elem *split( struct elem *top, const int key ) {
-
-  struct elem *res;
-
-  if( !top ) {
-          res = top;
-  } else {
-          if( top->data == key ) {
-                  res = top->next;
-                  top->next = NULL;
-          } else {
-                  res = split( top->next, key );
-          }
-  }
-  return res;
-}
-
 struct elem *merge( struct elem *top1, struct elem *top2 ) {
 
   struct elem *res;
