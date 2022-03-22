@@ -51,15 +51,17 @@ sudo apt update
 sudo apt install swi-prolog
 ```
 
-# Clonare la repository
+# Clonare i singoli file
 
 ```bash
 # Una volta installato il pacchetto swi-prolog non ci resta 
-# che clonare sul nostro computer locale la libreria 
-# combinatory_logic. Per farlo saranno sufficienti i
-# seguenti comandi :
+# che clonare i file sul nostro computer locale presenti nella
+# directory combinatory_logic. Detto ciò, cerchiamo di clonare 
+# solo i file strettamente necessari evitando così, di scaricare l'intera libreria. 
+# Per farlo saranno sufficienti i seguenti comandi :
 
-git clone 
+wget https://raw.githubusercontent.com/GiandomenicoIameo/library/main/swi-prolog/combinatory_logic/combinatorics.pro
+wget https://raw.githubusercontent.com/GiandomenicoIameo/library/main/swi-prolog/combinatory_logic/dictionary.pro
 
 ```
 
