@@ -86,6 +86,6 @@ Welcome to SWI-Prolog (threaded, 64 bits, version 8.0.2)
 
 ?- [ 'dictionary.pro' ].                # oppure
 ?- consult( 'dictionary.pro' ).         # viene utilizzato quando si carica un programma per la prima volta
-?- reconsult( 'dictonary.pro' ).       # viene utilizzato quando si carica un programma dopo una correzione
+?- reconsult( 'dictionary.pro' ).       # viene utilizzato quando si carica un programma dopo una correzione
 ```
 
