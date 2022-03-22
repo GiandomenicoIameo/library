@@ -27,37 +27,48 @@ struct elem {
     struct elem *next;
 };
 
-struct equeue {
+struct queue {
     struct elem *top;
     struct elem *end;
 };
 
 /* node allocation functions */
 struct elem *allocate( int key );
-struct equeue *init( void );
-int isempty( void *list );
+struct queue *init( void );
 
 /* Standard stack operations */
 struct elem *pop( struct elem *top );
-struct elem *push( struct elem *top, struct elem *node );
+struct elem *push( struct elem *top, struct elem *const node );
 
 /* Standard queue operations */
-struct equeue *enqueue( struct equeue *queue, struct elem *node );
-struct equeue *dequeue( struct equeue *queue );
+struct queue *enqueue( struct queue *queue, struct elem *const node );
+struct queue *dequeue( struct queue *queue );
 
+/* Reverse a linked list */
+struct elem *reverse_1( struct elem *top );
+struct elem *reverse_2( struct elem *succ, struct elem *const prec );
 
-struct elem *append( struct elem *top, struct elem *node );
-unsigned int len( struct elem *top );
-struct elem *inorder( struct elem *top, struct elem *node );
+/* Insertion operations */
+struct elem *append( struct elem *top, struct elem *const node );
+static struct elem *add( struct elem *end, struct elem *const node );
+struct elem *inorder( struct elem *top, struct elem *const node );
+
+/* Search operations */
 struct elem *address( struct elem *top, int key );
-struct elem *clear( struct elem *top );
-struct elem *delete( struct elem *top, int key );
-struct elem *copy( struct elem *top );
 struct elem *max( struct elem *top );
 struct elem *min( struct elem *top );
-struct elem *reverse( struct elem *succ, struct elem *prec );
+
+/* Cancellation operations */
+struct elem *clear( struct elem *top );
+struct elem *delete( struct elem *top, int key );
+
+/* concatenation of lists */
 struct elem *concatenate( struct elem *top1, struct elem *top2 );
 struct elem *merge( struct elem *top1, struct elem *top2 );
-static struct elem *add( struct elem *end, struct elem *node );
+
+/* Other operations */
+unsigned int len( struct elem *top );
+int isempty( void *list );
+struct elem *copy( struct elem *top );
 
 #endif
