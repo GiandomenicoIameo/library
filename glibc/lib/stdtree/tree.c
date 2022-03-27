@@ -48,7 +48,7 @@ struct tree *destroy( struct tree *root ) {
   return res;
 }
 
-void preOrder( struct tree *root ) {
+void preorder( struct tree *root ) {
 
   if( root ) {
           printf( "%d ", root->data );
@@ -57,7 +57,7 @@ void preOrder( struct tree *root ) {
   }
 }
 
-void inOrder( struct tree *root ) {
+void inorder( struct tree *root ) {
 
   if( root ) {
           inOrder( root->left );
@@ -66,7 +66,7 @@ void inOrder( struct tree *root ) {
   }
 }
 
-void postOrder( struct tree *root ) {
+void postorder( struct tree *root ) {
 
   if( root ) {
           postOrder( root->left );
