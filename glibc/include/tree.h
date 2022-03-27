@@ -23,9 +23,9 @@ struct tree *destroy( struct tree *root );
 int checkup( struct tree *root, int min, int max );
 
 // Algorithms for visiting binary trees
-void preOrder( struct tree *root );
-void inOrder( struct tree *root );
-void postOrder( struct tree *root );
+void preorder( struct tree *root );
+void inorder( struct tree *root );
+void postorder( struct tree *root );
 
 // Search algorithms
 struct tree *bsmin( struct tree* root );
