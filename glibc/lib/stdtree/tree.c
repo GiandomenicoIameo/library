@@ -52,25 +52,25 @@ void preorder( struct tree *root ) {
 
   if( root ) {
           printf( "%d ", root->data );
-          preOrder( root->left );
-          preOrder( root->right );
+          preorder( root->left );
+          preorder( root->right );
   }
 }
 
 void inorder( struct tree *root ) {
 
   if( root ) {
-          inOrder( root->left );
+          inorder( root->left );
           printf( "%d ", root->data );
-          inOrder( root->right );
+          inorder( root->right );
   }
 }
 
 void postorder( struct tree *root ) {
 
   if( root ) {
-          postOrder( root->left );
-          postOrder( root->right );
+          postorder( root->left );
+          postorder( root->right );
           printf( "%d ", root->data );
   }
 }
