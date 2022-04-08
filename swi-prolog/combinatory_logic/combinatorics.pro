@@ -16,6 +16,3 @@ permutation( [ _|Xs ], Acc, Ys ) :- permutation( Xs, Acc, Ys ).
 combination( _, [] ).
 combination( Ys, [ X|Xs ] ) :-
 combination( Ys, Xs ), member( X, Ys ).
-
-disposition( Xs, Ys ) :-
-permutation( Xs, Xs, Ys ).
