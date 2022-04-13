@@ -12,9 +12,9 @@
 #include <stdlib.h>
 
 struct tree {
-  struct tree *left;
-  int data;
-  struct tree* right;
+        struct tree *left;
+        int data;
+        struct tree* right;
 };
 
 struct tree *pose( int data );
