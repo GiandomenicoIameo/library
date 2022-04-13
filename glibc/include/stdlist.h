@@ -23,13 +23,13 @@
 #include <stdlib.h>
 
 struct elem {
-    int data;
-    struct elem *next;
+        int data;
+        struct elem *next;
 };
 
 struct queue {
-    struct elem *top;
-    struct elem *end;
+        struct elem *top;
+        struct elem *end;
 };
 
 /* node allocation functions */
