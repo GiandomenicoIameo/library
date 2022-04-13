@@ -32,9 +32,9 @@ unsigned int strcd( const char *s ) {
     unsigned int count = 0;
 
     for( ; *s != '\0'; s++ ) {
-
-            if( isdigit( *s ) )
+            if( isdigit( *s ) ) {
                     count++;
+            }
     }
     return count;
 }
@@ -46,9 +46,9 @@ unsigned int strcsp( const char *s ) {
     unsigned int count = 0;
 
     for( ; *s != '\0'; s++ ) {
-      
-            if( *s == ' ' )
+            if( *s == ' ' ) {
                     count++;
+            }
     }
     return count;
 }
