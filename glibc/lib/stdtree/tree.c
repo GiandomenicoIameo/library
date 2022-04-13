@@ -119,7 +119,7 @@ int checkup( struct tree *root, int min, int max ) {
                      L = checkup( root->left, min, root->data );
                      R = checkup( root->right, root->data, max );
 
-                     res = L & R;
+                     res = L && R;
              } else {
                      res = 0;
              }
