@@ -142,6 +142,14 @@ struct tree *bstree( struct tree *root, int data ) {
     return res;
 }
 
+/**    
+    L'operazione di inserimento di un nodo all'interno di un albero bilanciato costa, in termini di tempo, log2( n ), dove
+    n sono i nodi attualmente presenti nell'albero. Ogni nuova inserzione parte dalla radice e scende giù nell'albero esistente
+    creato fino a quel momento, per trovare dove agganciare il nodo. Il costo totale per costruire l'albero di len nodi è 
+    
+    O( log( 1 ) ) + O( log( 2 ) ) + O( log( 3 ) ) + ... + O( log( len ) ) = O( log( len! ) ) = O( len * log( len ) )
+*/
+
 void bsort( int* array, const int len ) {
 
     struct tree *root = NULL;
