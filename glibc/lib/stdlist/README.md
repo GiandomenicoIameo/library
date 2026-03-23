@@ -3,7 +3,7 @@ Libreria stdlist.c
 
 ----------
 
-Il file contiene alcune delle piu' importanti funzioni che operano
+Il file contiene alcune delle più importanti funzioni che operano
 sulle **liste semplicemente concatenate**. Ogni funzione dichiarata è
 stata studiata nel minimo dettaglio per garantire, a chi le utilizza,
 prestazioni efficienti in relazione al **tempo** e allo **spazio** utilizzato.
