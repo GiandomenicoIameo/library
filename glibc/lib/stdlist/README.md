@@ -47,7 +47,7 @@ adottato in **GNOME**. Sebbene le convenzioni di formattazione siano una questio
 community di **GNOME** preferisce uno stile che promuova coerenza, leggibilità e 
 manutenibilità. 
 
-Qui di seguito ho illustrato un esempio di scrittura del codice :
+Per maggiore chiarezza, di seguito riporto un esempio di funzione scritta in stile GNOME.
 
 Funzione pop :
 ----------
