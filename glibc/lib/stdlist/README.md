@@ -3,42 +3,30 @@ Libreria stdlist.c
 
 ----------
 
-Ogni programma scritto nel linguaggio C contiene tipicamente
-riferimenti a funzioni definite altrove, come le librerie standard
-o nelle librerie private. Un esempio e' stdlist.c.
-
-Insieme alla libreria vengono inoltre forniti gli **header
-file**, file di testo che permettono al programmatore di utilizzare
-lo specifico insieme di funzioni della libreria a esse associate.
-
-Il file contiene alcune delle piu' importanti funzioni riguardo
-alle **liste semplicemente concatenate**. Ogni funzione dichiarata e'
+Il file contiene alcune delle piu' importanti funzioni che operano
+sulle **liste semplicemente concatenate**. Ogni funzione dichiarata è
 stata studiata nel minimo dettaglio per garantire, a chi le utilizza,
 prestazioni efficienti in relazione al **tempo** e allo **spazio** utilizzato.
-
-
-
 
 Strutture dati utilizzate :
 ----------
 
-Il file header ( stdlist.h ) introduce le **strutture dati dinamiche** che
-possono crescere e ridursi al momento dell'esecuzione.
+Il file header (stdlist.h) introduce le seguenti **strutture dati dinamiche**: 
 
-- Le **liste collegate** sono collezioni di dati "allineati in una riga".
-  In una lista collegata le inserzioni e le cancellazioni vengono fatte
-  ovunque.
+- **Lista collegata**: è semplicemente una collezione di dati. 
+  Trovo molto semplice immaginarli come "allineati in una riga".
+  In una lista collegata, le inserzioni e le cancellazioni possono avvenire in un
+  qualsiasi punto.
 
-- Lo **stack** e' un tipo di lista collegata molto importante nei sistemi
-  operativi e compilatori. Le inserzioni e cancellazioni vengono fatte
+- **Stack**: È un tipo di lista collegata in cui le inserzioni e le cancellazioni avvengono
  _solo a un estremo_, ovvero la sua **cima**.
 
-- Le **code** rappresentano le linee di attesa; le inserzioni vengono fatte
-  _solo alla fine_ ( indicata con **tail** ) di una coda e le rimozioni
-  vengono fatte _solo all'inizio_ ( indicato con **head** ) di una coda.
+- **Coda**: È un tipo di lista collegata in cui inserzioni avvengono
+  _solo alla fine_ e le rimozioni avvengono _solo all'inizio_.
 
-Ricordate che una _struttura autoreferenziale_ contiene un membro puntatore
-che punta a una struttura dello stesso tipo. Le definizioni sono le seguenti :
+Tali _strutture autoreferenziale_, anche se apparentemente molto diverse tra di loro, condividono un aspetto: 
+possiedono un membro puntatore che punta a una struttura dello stesso tipo. Qui di seguito ho riportato
+le definizioni delle strutture **Lista collegata** e **Coda**.
 
 ```c
 // Struttura del nodo
@@ -54,12 +42,12 @@ struct equeue {
 };
 ```
 
-Lo stile di scrittura del codice, come potete notare, rispecchia lo 
-stile adottato in **GNOME**. Sebbene lo stile sia una questione di gusti, in 
-**GNOME** preferiscono uno stile che promuova coerenza, leggibilità e 
+Lo stile di scrittura del codice, se non fosse già chiaro, rispecchia quello 
+adottato in **GNOME**. Sebbene le convenzioni di formattazione siano una questione di gusti, la 
+community di **GNOME** preferisce uno stile che promuova coerenza, leggibilità e 
 manutenibilità. 
 
-Qui di seguito vi presentiamo un esempio di scrittura del codice :
+Qui di seguito ho illustrato un esempio di scrittura del codice :
 
 Funzione pop :
 ----------
@@ -82,5 +70,5 @@ struct elem *pop( struct elem *top ) {
 > Note :
 > 
 > Il file stdlist.c non fa parte della libreria standard del C. Essa
-> e' stata distribuita nella speranza che sia utile,
+> è stata distribuita nella speranza che sia utile,
 > ma **senza alcuna garanzia**.
