@@ -8,7 +8,7 @@ sulle **liste semplicemente concatenate**. Ogni funzione dichiarata è
 stata studiata nel minimo dettaglio per garantire, a chi le utilizza,
 prestazioni efficienti in relazione al **tempo** e allo **spazio** utilizzato.
 
-Strutture dati utilizzate :
+Strutture dati utilizzate
 ----------
 
 Il file header (stdlist.h) introduce le seguenti **strutture dati dinamiche**: 
@@ -26,7 +26,7 @@ Il file header (stdlist.h) introduce le seguenti **strutture dati dinamiche**:
 
 Tali _strutture autoreferenziale_, anche se apparentemente molto diverse tra di loro, condividono un aspetto: 
 possiedono un membro puntatore che punta a una struttura dello stesso tipo. Qui di seguito ho riportato
-le definizioni delle strutture **Lista collegata** e **Coda**.
+le definizioni di un **nodo** e della struttura dati **Coda**.
 
 ```c
 // Struttura del nodo
@@ -49,7 +49,7 @@ manutenibilità.
 
 Per maggiore chiarezza, di seguito riporto un esempio di funzione scritta in stile GNOME.
 
-Funzione pop :
+Funzione pop
 ----------
 
 ```c
