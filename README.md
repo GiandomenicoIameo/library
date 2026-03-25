@@ -1,4 +1,4 @@
-Librerie disponibili
+Librerie
 ===================
 
 Qui di seguito ho riportato i link di accesso alle librerie glibc e swi-prolog.
