@@ -15,7 +15,7 @@ Qui di seguito ho riportato i link di accesso alle librerie glibc e swi-prolog.
  
 
 
-$$Dimostrazione$$
+$$Secondo quanto assunto$$
 
 $$E = mc^{2}$$
 $$\mathbb{P}(E) = \bigcup_{i=1}^{n}$$
