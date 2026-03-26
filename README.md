@@ -15,7 +15,4 @@ Qui di seguito ho riportato i link di accesso alle librerie glibc e swi-prolog.
  
 
 
-$$Secondo \space quanto \space assunto$$
-
-$$E = mc^{2}$$
-$$\mathbb{P}(E) = \bigcup_{i=1}^{n}$$
+1.1 PROPOSIZIONE. $$Sia \space \left( \mathbb{N},+,\cdot  \right), \space ove$$
