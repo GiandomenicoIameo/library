@@ -15,4 +15,4 @@ Qui di seguito ho riportato i link di accesso alle librerie glibc e swi-prolog.
  
 
 
-$$\mathrm{P}{\scriptscriptstyle \mathrm{ROPOSIZIONE\ 1.}} \space Sia \space \left( \mathbb{N},+,\cdot  \right), \space ove$$
+$$\scriptscriptstyle{P}{\scriptscriptstyle \mathrm{ROPOSIZIONE\ 1.}} \space Sia \space \left( \mathbb{N},+,\cdot  \right), \space ove$$
