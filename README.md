@@ -14,5 +14,5 @@ Qui di seguito ho riportato i link di accesso alle librerie glibc e swi-prolog.
   * [Libreria stdtree.c](https://giandomenicoiameo.github.io/library/glibc/lib/stdtree)
  
 
-$\mathrm{1.1 \space P}{\scriptstyle \textnormal{ROPOSIZIONE.}}$ $\mathrm{Sia}$ $(\mathbb{N},+,\cdot)$, $\mathrm{ove}$ $+$ $\mathrm{e}$ $\cdot$ $\mathrm{sono \ le \ solite}$ $\mathrm{operazioni \ di \ addizione}$ $\mathrm{e \ moltiplicazione}$ $\mathrm{soddisfacenti \ alle}$ $\mathrm{seguenti \ proprietà:}$
+$$\mathrm{1.1 \ P}{\scriptstyle \textnormal{ROPOSIZIONE.}}$$ $$\mathit{Sia \ (\mathbb{N},+,\cdot),}$$ $$\mathit{ove \ + \ e \ \cdot \ sono \ le \ solite}$$ $$\mathit{operazioni \ di \ addizione}$$ $$\mathit{e \ moltiplicazione}$$ $$\mathit{soddisfacenti \ alle \ seguenti \ proprietà:}$$
 
