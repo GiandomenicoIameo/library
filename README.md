@@ -15,4 +15,4 @@ Qui di seguito ho riportato i link di accesso alle librerie glibc e swi-prolog.
  
 
 
-$$\mathrm{1.1 \space P}{\scriptstyle \textnormal{ROPOSIZIONE.}} \space Sia \space \left( \mathbb{N},+,\cdot  \right), \space ove + e \cdot sono \space le \space solite \space operazioni \space di \space addizione \space e \space moltiplicazione \space con \space le \space seguenti \space proprietà:$$
+$$\mathrm{1.1 \space P}{\scriptstyle \textnormal{ROPOSIZIONE.}} \space Sia \space \left( \mathbb{N},+,\cdot  \right), \space ove + e \cdot sono \space le \space solite \space operazioni \space di \space addizione \space e \space moltiplicazione \space soddisfacenti \space alle \space seguenti \space proprietà:$$
