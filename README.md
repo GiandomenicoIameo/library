@@ -15,4 +15,4 @@ Qui di seguito ho riportato i link di accesso alle librerie glibc e swi-prolog.
  
 
 
-$${\scriptscriptstyle \mathrm{PROPOSIZIONE\ 1.}} \space Sia \space \big( \mathbb{N},+,\cdot  \big), \space ove$$
+$${\scriptscriptstyle \mathrm{PROPOSIZIONE\ 1.}} \space Sia \space \left( \mathbb{N},+,\cdot  \right), \space ove$$
